@@ -1,0 +1,298 @@
+<QucsStudio Library 3.0.0 "Schottky Diodes">
+
+<Component BAR46>
+  <Description>
+    silicon schottky diode
+    100V, 150mA, 10pF @ 0V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAR46_ 1 0 0 -26 13 0 0 "1.5896e-005" 0 "2.3964" 0 "1.1684e-011" 0 "0.5" 0 "0.36094" 0 "0.5" 0 "0" 0 "1.001e-020" 0 "4.995" 0 "0.0077928" 0 "0" 0 "0.0054695" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAS40>
+  <Description>
+    schottky diode
+    Si, 40V, 200mA, 5ns
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    Diode D_BAS40_ 1 0 0 -26 13 0 0 "6.12u" 0 "2.61" 0 "5p" 0 "0.333" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.12" 0 "7.2n" 0 "0" 0 "0" 0 "1" 0 "1" 0 "40" 0 "200n" 0 "26.85" 0 "3.0" 0 "1.11" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "26.85" 0 "1.0" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAS70>
+  <Description>
+    schottky diode
+    Si, 70V, 70mA, 5ns
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    Diode D_BAS70_ 1 0 0 -26 13 0 0 "99.5p" 0 "1.7" 0 "2p" 0 "0.333" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.6" 0 "7.2n" 0 "0" 0 "0" 0 "1" 0 "1" 0 "70" 0 "10u" 0 "26.85" 0 "3.0" 0 "1.11" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "0.0" 0 "26.85" 0 "1.0" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT20J>
+  <Description>
+    silicon schottky diode
+    23V, 1.0A, 20pF @ 5V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT20J_ 1 0 0 -26 13 0 0 "1.9105e-007" 0 "0.97065" 0 "6.828e-011" 0 "0.46842" 0 "0.3905" 0 "0.5" 0 "0" 0 "2.108e-006" 0 "4.995" 0 "0.14831" 0 "0" 0 "402.03" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT30J>
+  <Description>
+    silicon schottky diode
+    30V, 300mA, 22pF @ 0V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT30J_ 1 0 0 -26 13 0 0 "4.9329e-008" 0 "1.0079" 0 "2.3639e-011" 0 "0.42373" 0 "0.3905" 0 "0.5" 0 "0" 0 "1.0298e-007" 0 "4.995" 0 "0.41244" 0 "0" 0 "93.33" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT60J>
+  <Description>
+    silicon schottky diode
+    10V, 3.0A
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT60J_ 1 0 0 -26 13 0 0 "2.0053e-008" 0 "0.93972" 0 "1.0196e-010" 0 "0.39267" 0 "0.3905" 0 "0.5" 0 "0" 0 "6.5019e-007" 0 "4.995" 0 "0.18722" 0 "0" 0 "614.92" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT41>
+  <Description>
+    silicon schottky diode
+    100V, 200mA, 3pF @ 1V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT41_ 1 0 0 -26 13 0 0 "1e-008" 0 "1.4402" 0 "3.5613e-012" 0 "0.49981" 0 "0.36559" 0 "0.5" 0 "0" 0 "2.0076e-009" 0 "4.995" 0 "0.12219" 0 "0" 0 "0.00029159" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT42>
+  <Description>
+    silicon schottky diode
+    30V, 200mA, 5ns, 7pF @ 1V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT42_ 1 0 0 -26 13 0 0 "0.00048077" 0 "4.995" 0 "1.3698e-011" 0 "0.50005" 0 "0.38464" 0 "0.5" 0 "0" 0 "1.001e-020" 0 "4.995" 0 "0.04015" 0 "0" 0 "20.507" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT43>
+  <Description>
+    silicon schottky diode
+    30V, 200mA, 5ns, 7pF @ 1V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT43_ 1 0 0 -26 13 0 0 "0.00048077" 0 "4.995" 0 "1.3698e-011" 0 "0.50005" 0 "0.38464" 0 "0.5" 0 "0" 0 "1.001e-020" 0 "4.995" 0 "0.04015" 0 "0" 0 "20.507" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT46>
+  <Description>
+    silicon schottky diode
+    100V, 150mA, 6pF @ 1V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT46_ 1 0 0 -26 13 0 0 "1.5896e-005" 0 "2.3964" 0 "1.1684e-011" 0 "0.5" 0 "0.36094" 0 "0.5" 0 "0" 0 "1.001e-020" 0 "4.995" 0 "0.0077928" 0 "0" 0 "0.0054695" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "0.69" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component BAT54>
+  <Description>
+    silicon schottky diode
+    40V, 300mA, 5ns, 7pF @ 1V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode BAT54JFILM_ 1 0 0 -26 13 0 0 "1.998e-007" 0 "1.5145" 0 "9.4409e-012" 0 "0.40749" 0 "0.3905" 0 "0.5" 0 "0" 0 "1.001e-020" 0 "4.995" 0 "0.2508" 0 "0" 0 "0.0029971" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "3" 0 "1.11" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N6263>
+  <Description>
+    silicon schottky diode
+    60V, 50mA, 0.1ns, 2.2pF @ 0V
+    Manufacturer: ST Microelectronics
+  </Description>
+  <Model>
+    Diode 1N6263_ 1 0 0 -26 13 0 0 "3.8736e-009" 0 "1.0099" 0 "1.7738e-012" 0 "0.1955" 0 "0.3905" 0 "0.5" 0 "0" 0 "6.2866e-009" 0 "3.9204" 0 "31.514" 0 "0" 0 "18.247" 0 "0" 0 "1" 0 "1" 0 "0" 0 "0.001" 0 "26.85" 0 "2" 0 "1.11" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "0.000702" 0 "1108" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5817>
+  <Description>
+    schottky barrier rectifier
+    silicon, 20V, 1.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5817_ 1 0 0 -26 13 0 0 "2.93092e-005" 0 "1.33711" 0 "1e-014" 0 "0.9" 0 "8.0542" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0524736" 0 "1.47806e-008" 0 "0" 0 "0" 0 "1" 0 "1" 0 "20" 0 "0.001" 0 "26.85" 0 "0.325839" 0 "0.1" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5818>
+  <Description>
+    schottky barrier rectifier
+    silicon, 30V, 1.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5818_ 1 0 0 -26 13 0 0 "4.4214e-005" 0 "1.37435" 0 "1e-014" 0 "0.54046" 0 "1.5" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0531374" 0 "2.6273e-008" 0 "0" 0 "0" 0 "1" 0 "1" 0 "30" 0 "0.001" 0 "26.85" 0 "0.5" 0 "0.6" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5819>
+  <Description>
+    schottky barrier rectifier
+    silicon, 40V, 1.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5819_ 1 0 0 -26 13 0 0 "1.19279e-005" 0 "1.16517" 0 "1e-014" 0 "0.590203" 0 "1.5" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0625421" 0 "2.6273e-008" 0 "0" 0 "0" 0 "1" 0 "1" 0 "40" 0 "0.001" 0 "26.85" 0 "3.22098" 0 "1.3" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5820RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 20V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5820RL_ 1 0 0 -26 13 0 0 "0.001" 0 "2.34208" 0 "1e-014" 0 "0.364419" 0 "1.5" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0274674" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "20" 0 "0.002" 0 "26.85" 0 "3.02706" 0 "0.550905" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5821RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 30V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5821RL_ 1 0 0 -26 13 0 0 "0.001" 0 "2.34207" 0 "1e-014" 0 "0.415004" 0 "1.5" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0274675" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "30" 0 "0.002" 0 "26.85" 0 "3.0318" 0 "0.550765" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component 1N5822RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 40V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode D1N5822RL_ 1 0 0 -26 13 0 0 "0.00028701" 0 "1.49609" 0 "1e-014" 0 "0.521445" 0 "1.5" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0391772" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "40" 0 "0.002" 0 "26.85" 0 "0.5" 0 "0.646618" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR340RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 40V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR340RL_ 1 0 0 -26 13 0 0 "6.95527e-006" 0 "1.23746" 0 "1e-014" 0 "0.455759" 0 "0.04" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0277955" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "40" 0 "0.0006" 0 "26.85" 0 "5" 0 "0.1" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR350RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 50V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR350RL_ 1 0 0 -26 13 0 0 "1e-007" 0 "0.88918" 0 "1e-014" 0 "0.499812" 0 "0.4" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0621549" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "50" 0 "0.0006" 0 "26.85" 0 "4" 0 "0.570449" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR360RL>
+  <Description>
+    schottky barrier rectifier
+    silicon, 60V, 3.0A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR360RL_ 1 0 0 -26 13 0 0 "1e-007" 0 "0.889172" 0 "1e-014" 0 "0.499812" 0 "0.4" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0621601" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "60" 0 "0.0006" 0 "26.85" 0 "4" 0 "0.570452" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR1035>
+  <Description>
+    schottky barrier power rectifier
+    35V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR1035_ 1 0 0 -26 13 0 0 "0.000452023" 0 "2" 0 "1e-014" 0 "0.434536" 0 "0.476396" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0106817" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "35" 0 "0.0001" 0 "26.85" 0 "0.5" 0 "0.756448" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR1045>
+  <Description>
+    schottky barrier power rectifier
+    45V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR1045_ 1 0 0 -26 13 0 0 "0.000452023" 0 "2" 0 "1e-014" 0 "0.434536" 0 "0.476396" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0106817" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "45" 0 "0.0001" 0 "26.85" 0 "0.5" 0 "0.756448" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR1060>
+  <Description>
+    schottky barrier power rectifier
+    60V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR1060_ 1 0 0 -26 13 0 0 "0.000132385" 0 "2" 0 "1e-014" 0 "0.5" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0122186" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "60" 0 "0.0001" 0 "26.85" 0 "3.80757" 0 "0.828762" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR1080>
+  <Description>
+    schottky barrier power rectifier
+    80V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR1080_ 1 0 0 -26 13 0 0 "0.000134296" 0 "2" 0 "1e-014" 0 "0.5" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0124504" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "80" 0 "0.0001" 0 "26.85" 0 "4" 0 "0.823361" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR1090>
+  <Description>
+    schottky barrier power rectifier
+    90V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR1090_ 1 0 0 -26 13 0 0 "0.000140082" 0 "2" 0 "1e-014" 0 "0.5" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0134928" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "90" 0 "0.0001" 0 "26.85" 0 "4" 0 "0.817735" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>
+
+<Component MBR10100>
+  <Description>
+    schottky barrier power rectifier
+    100V, 10A
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    Diode DMBR10100_ 1 0 0 -26 13 0 0 "0.000132385" 0 "2" 0 "1e-014" 0 "0.5" 0 "0.7" 0 "0.5" 0 "0" 0 "0" 0 "2" 0 "0.0122186" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "100" 0 "0.0001" 0 "26.85" 0 "3.80757" 0 "0.828762" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "26.85" 0 "1" 0 "7.02e-4" 0 "1108.0" 0 "Schottky" 0
+  </Model>
+</Component>

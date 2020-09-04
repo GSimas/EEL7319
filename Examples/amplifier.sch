@@ -1,6 +1,6 @@
 <Qucs Schematic 0.0.19>
 <Properties>
-  <View=0,0,969,800,1,0,0>
+  <View=0,0,1010,800,1,0,0>
   <Grid=10,10,1>
   <DataSet=amplifier.dat>
   <DataDisplay=amplifier.dpl>
@@ -46,6 +46,10 @@
   <460 250 460 250 "output" 490 220 0 "">
 </Wires>
 <Diagrams>
+  <Tab 670 210 300 200 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 1 315 0 225 "" "" "">
+	<"output.V" #0000ff 0 3 1 0 0>
+	<"V1.I" #0000ff 0 3 1 0 0>
+  </Tab>
 </Diagrams>
 <Paintings>
 </Paintings>

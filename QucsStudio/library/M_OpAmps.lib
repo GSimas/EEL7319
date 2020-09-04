@@ -1,0 +1,1022 @@
+<QucsStudio Library 3.0.0 "OpAmps">
+
+<DefaultSymbol>
+  .ID 30 14 OpAmp "0=Package=8DIP-OpAmp"
+  Line -30 -20 10 0 #000080 2 1
+  Line -30 20 10 0 #000080 2 1
+  Line 30 0 10 0 #000080 2 1
+  Line -20 -35 0 70 #000080 2 1
+  Line -20 -35 50 35 #000080 2 1
+  Line -20 35 50 -35 #000080 2 1
+  Line 0 40 0 -20 #000080 2 1
+  Line 0 -20 0 -20 #000080 2 1
+  Line -16 19 7 0 #000000 1 1
+  Line -16 -19 7 0 #ff0000 1 1
+  Line -13 -22 0 7 #ff0000 1 1
+  Text 4 -34 10 #000000 0 "V+"
+  Text 4 22 10 #000000 0 "V-"
+  .PortSym -30 -20 1 0
+  .PortSym -30 20 2 0
+  .PortSym 0 -40 3 270
+  .PortSym 0 40 4 90
+  .PortSym 40 0 5 180
+</DefaultSymbol>
+
+<Component LM318>
+  <Description>
+    BJT operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 15MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_LM318 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      Vdc:VLN _cnet1 _net92 U="21"
+      Vdc:VLP _cnet2 gnd U="21"
+      Vdc:VE _cnet3 _net4 U="2.7"
+      Vdc:VC _cnet4 _net53 U="2.7"
+      R:RP _net3 _net4 R="9231" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:REE _net10 _net99 R="114300" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE2 _net14 _net10 R="394.7" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE1 _net13 _net10 R="394.7" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net3 _net12 R="424.4" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net3 _net11 R="424.4" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      _BJT:Q2 _net1 _net12 _net14 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="5833" Br="1" Rbm="0" "0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q1 _net2 _net11 _net13 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="5833" Br="1" Rbm="0" "0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:IEE _net4 _net10 I="0.00175"
+      VCCS:GCM _net10 gnd _net6 _net99 G="1.325e-008" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.002474" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-2e+006" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="2e+006" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="2e+006" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-2e+006" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="1.697e+006" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "2.5e-011" "0" ""
+      C:C1 _net11 _net12 "8.5e-012" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component LM324>
+  <Description>
+    BJT operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 1.2MHz, macro model for +5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_LM324 _net1 _net2 _net3 _net4 _net5
+      Vdc:VLN _cnet1 _net92 U="40"
+      Vdc:VLP _cnet2 gnd U="40"
+      Vdc:VE _cnet3 _net4 U="0.6"
+      Vdc:VC _cnet4 _net53 U="2.1"
+      R:RP _net3 _net4 R="30310" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:REE _net10 _net99 R="1.992e+007" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE2 _net14 _net10 R="2773" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE1 _net13 _net10 R="2773" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net4 _net12 R="7957" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net4 _net11 R="7957" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      _BJT:Q2 _net1 _net12 _net14 Type="pnp" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="250" Br="1" Rbm="0" "0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q1 _net2 _net11 _net13 Type="pnp" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="250" Br="1" Rbm="0" "0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:IEE _net10 _net3 I="1.004e-005"
+      VCCS:GCM _net10 gnd _net6 _net99 G="7.067e-009" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001257" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-2e+007" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="2e+007" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="2e+007" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-2e+007" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="1.591e+007" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "2e-11" "0" ""
+      C:C1 _net11 _net12 "5.544e-12" "0" ""
+    .Def:End
+  </Model>
+  <Symbol>
+    .ID 30 14 X
+    Line -30 -20 10 0 #000080 2 1
+    Line -30 20 10 0 #000080 2 1
+    Line 30 0 10 0 #000080 2 1
+    Line -20 -35 0 70 #000080 2 1
+    Line -20 -35 50 35 #000080 2 1
+    Line -20 35 50 -35 #000080 2 1
+    Line 0 40 0 -20 #000080 2 1
+    Line 0 -20 0 -20 #000080 2 1
+    Line -16 19 7 0 #000000 1 1
+    Line -16 -19 7 0 #ff0000 1 1
+    Line -13 -22 0 7 #ff0000 1 1
+    Text 4 -34 10 #000000 0 "V+"
+    Text 4 22 10 #000000 0 "V-"
+    .PortSym -30 -20 1 0
+    .PortSym -30 20 2 0
+    .PortSym 0 -40 3 270
+    .PortSym 0 40 4 90
+    .PortSym 40 0 5 180
+  </Symbol>
+</Component>
+
+<Component LM358>
+  <Description>
+    BJT operational amplifier
+    internally frequency-compensated
+    +16V/-16V, 0.7MHz, macro model for +-5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_LM358 _net1 _net2 _net3 _net4 _net5
+      C:C1 _net11 _net12 "5.544e-12" "0" ""
+      C:C2 _net6 _net7 "2e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="1.591e7" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-2e7" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="2e7" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="2e7" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-2e7" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001257" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="7.067e-9" T="0"
+      Idc:IEE _net10 _net3 I="1.004e-5"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      _BJT:Q1 _net2 _net11 _net13 Type="pnp" Is="8e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="250" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q2 _net1 _net12 _net14 Type="pnp" Is="8e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="250" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net4 _net11 R="7957" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net4 _net12 R="7957" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE1 _net13 _net10 R="2773" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE2 _net14 _net10 R="2773" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:REE _net10 _net99 R="1.992e+007" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="50" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="30310" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="2.1"
+      Vdc:VE _cnet2 _net4 U="0.6"
+      Vdc:VLP _cnet3 gnd U="40"
+      Vdc:VLN _cnet4 _net92 U="40"
+    .Def:End
+  </Model>
+  <Symbol>
+    .ID 30 14 X
+    Line -30 -20 10 0 #000080 2 1
+    Line -30 20 10 0 #000080 2 1
+    Line 30 0 10 0 #000080 2 1
+    Line -20 -35 0 70 #000080 2 1
+    Line -20 -35 50 35 #000080 2 1
+    Line -20 35 50 -35 #000080 2 1
+    Line 0 40 0 -20 #000080 2 1
+    Line 0 -20 0 -20 #000080 2 1
+    Line -16 19 7 0 #000000 1 1
+    Line -16 -19 7 0 #ff0000 1 1
+    Line -13 -22 0 7 #ff0000 1 1
+    Text 4 -34 10 #000000 0 "V+"
+    Text 4 22 10 #000000 0 "V-"
+    .PortSym -30 -20 1 0
+    .PortSym -30 20 2 0
+    .PortSym 0 -40 3 270
+    .PortSym 0 40 4 90
+    .PortSym 40 0 5 180
+  </Symbol>
+</Component>
+
+<Component LM833>
+  <Description>
+    low-noise audio BJT operational amplifier
+    internally frequency-compensated
+    +18V/-18V, 15MHz, macro model
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_LM833 _net1 _net2 _net3 _net4 _net5
+      C:C1 _net11 _net12 "3.501e-12" "0" ""
+      C:C2 _net6 _net7 "1e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="2.796e7" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-3e7" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="3e7" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="3e7" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-3e7" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0005655" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="5.655e-9" T="0"
+      Idc:ISS _net4 _net10 I="7e-5"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      JFET:J1 _net2 _net11 _net10 Type="nfet" Vt0="-1" Beta="0.004568" Lambda="0" Rd="0" Rs="0" Is="1.5e-7" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="nfet" Vt0="-1" Beta="0.004568" Lambda="0" Rd="0" Rs="0" Is="1.5e-7" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net3 _net11 R="1768" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net3 _net12 R="1768" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="10" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="20" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="29030" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="2.857e6" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="0.9"
+      Vdc:VE _cnet2 _net4 U="0.4"
+      Vdc:VLP _cnet3 gnd U="30"
+      Vdc:VLN _cnet4 _net92 U="30"
+    .Def:End
+  </Model>
+  <Symbol>
+    .ID 30 14 X
+    Line -30 -20 10 0 #000080 2 1
+    Line -30 20 10 0 #000080 2 1
+    Line 30 0 10 0 #000080 2 1
+    Line -20 -35 0 70 #000080 2 1
+    Line -20 -35 50 35 #000080 2 1
+    Line -20 35 50 -35 #000080 2 1
+    Line 0 40 0 -20 #000080 2 1
+    Line 0 -20 0 -20 #000080 2 1
+    Line -16 19 7 0 #000000 1 1
+    Line -16 -19 7 0 #ff0000 1 1
+    Line -13 -22 0 7 #ff0000 1 1
+    Text 4 -34 10 #000000 0 "V+"
+    Text 4 22 10 #000000 0 "V-"
+    .PortSym -30 -20 1 0
+    .PortSym -30 20 2 0
+    .PortSym 0 -40 3 270
+    .PortSym 0 40 4 90
+    .PortSym 40 0 5 180
+  </Symbol>
+</Component>
+
+<Component TL051>
+  <Description>
+    low-offset JFET-input operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 3MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TL051 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      Vdc:VLN _cnet1 _net92 U="28"
+      Vdc:VLP _cnet2 gnd U="28"
+      Vdc:VE _cnet3 _net4 U="3.7"
+      Vdc:VC _cnet4 _net53 U="3"
+      R:RSS _net10 _net99 R="666700" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="11110" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="125" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="125" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="3422" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="3422" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-1" Beta="0.0001852" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-1" Beta="0.0001852" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:ISS _net10 _net3 I="0.0003"
+      VCCS:GCM _net10 gnd _net6 _net99 G="6.542e-9" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0002922" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-3e6" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="3e6" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="3e6" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-3e6" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="2.875e6" T="0"
+      VCVS:EGND1 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "1.5e-11" "0" ""
+      C:C1 _net11 _net12 "3.988e-12" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component TL061>
+  <Description>
+    low-power JFET-input operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 1MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TL061 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "3.498e-12" "0" ""
+      C:C2 _net6 _net7 "1.5e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="318300" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-300000" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="300000" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="300000" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-300000" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="9.426e-005" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="1.607e-009" T="0"
+      Idc:ISS _net10 _net3 I="5.25e-005"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-1" Beta="0.0001005" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-1" Beta="0.0001005" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="10610" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="10610" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="200" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="200" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="150000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="3.81e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="2.2"
+      Vdc:VE _cnet2 _net4 U="2.2"
+      Vdc:VLP _cnet3 gnd U="15"
+      Vdc:VLN _cnet4 _net92 U="15"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TL071>
+  <Description>
+    low-noise JFET-input operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 3MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TL071 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      Vdc:VLN _cnet1 _net92 U="25"
+      Vdc:VLP _cnet2 gnd U="25"
+      Vdc:VE _cnet3 _net4 U="2.2"
+      Vdc:VC _cnet4 _net53 U="2.2"
+      R:RSS _net10 _net99 R="1.026e6" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="21430" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="150" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="150" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="3536" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="3536" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-1" Beta="0.0002701" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-1" Beta="0.0002701" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:ISS _net10 _net3 I="0.000195"
+      VCCS:GCM _net10 gnd _net6 _net99 G="8.942e-9" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0002828" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-5e6" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="5e6" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="5e6" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-5e6" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="4.715e6" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "1.5e-11" "0" ""
+      C:C1 _net11 _net12 "3.498e-12" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component TL081>
+  <Description>
+    JFET-input operational amplifier
+    internally frequency-compensated
+    +15V/-15V, 3MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TL081 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      Vdc:VLN _cnet1 _net92 U="25"
+      Vdc:VLP _cnet2 gnd U="25"
+      Vdc:VE _cnet3 _net4 U="2.2"
+      Vdc:VC _cnet4 _net53 U="2.2"
+      R:RSS _net10 _net99 R="1.026e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="21430" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="150" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="150" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="3536" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="3536" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-1" Beta="0.0002701" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-1" Beta="0.0002701" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:ISS _net10 _net3 I="0.000195"
+      VCCS:GCM _net10 gnd _net6 _net99 G="8.942e-009" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0002828" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-5e+006" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="5e+006" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="5e+006" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-5e+006" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="4.715e+006" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "1.5e-11" "0" ""
+      C:C1 _net11 _net12 "3.498e-12" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLC271>
+  <Description>
+    CMOS operational amplifier
+    internally frequency-compensated
+    +15V, 1.7MHz, macro model for +5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLC271 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      Vdc:VLN _cnet1 _net92 U="25"
+      Vdc:VLP _cnet2 gnd U="25"
+      Vdc:VE _cnet3 _net4 U="0.7"
+      Vdc:VC _cnet4 _net53 U="1.85"
+      Vdc:VAD _net60 _net4 U="-0.7"
+      R:RSS _net10 _net99 R="3.448e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="8100" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="75" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="75" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net60 _net12 R="7236" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net60 _net11 R="7236" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-0.151" Beta="0.0006589" Lambda="0" Rd="0" Rs="0" Is="3e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-0.151" Beta="0.0006589" Lambda="0" Rd="0" Rs="0" Is="3e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      Idc:ISS _net10 _net3 I="5.8e-005"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="2.846e-8" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001382" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-1e6" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="1e6" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="1e6" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-1e6" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="1.12e6" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "2e-11" "0" ""
+      C:C1 _net11 _net12 "5.657e-12" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLC277>
+  <Description>
+    CMOS operational amplifier
+    low input offset voltage (500µV)
+    internally frequency-compensated
+    +15V, 1.7MHz, macro model for +5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLC277 _net1 _net2 _net3 _net4 _net5
+      Vdc:VLN _cnet1 _net92 U="20"
+      Vdc:VLP _cnet2 gnd U="20"
+      Vdc:VE _cnet3 _net4 U="0.7"
+      Vdc:VC _cnet4 _net53 U="1.9"
+      Vdc:VAD _net60 _net4 U="-0.7"
+      R:RSS _net10 _net99 R="3.448e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="7790" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="85" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="85" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net60 _net12 R="7236" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net60 _net11 R="7236" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-0.151" Beta="0.0006589" Lambda="0" Rd="0" Rs="0" Is="3e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-0.151" Beta="0.0006589" Lambda="0" Rd="0" Rs="0" Is="3e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      Idc:ISS _net10 _net3 I="5.8e-005"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="2.764e-8" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001382" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet1 G="-1e6" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet2 G="1e6" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet3 G="1e6" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet4 G="-1e6" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="9.881E5" T="0"
+      VCVS:EGND2 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 "2e-11" "0" ""
+      C:C1 _net11 _net12 "5.657e-12" "0" ""
+    .Def:End
+  </Model>
+  <Symbol>
+    .ID 30 14 X
+    Line -30 -20 10 0 #000080 2 1
+    Line -30 20 10 0 #000080 2 1
+    Line 30 0 10 0 #000080 2 1
+    Line -20 -35 0 70 #000080 2 1
+    Line -20 -35 50 35 #000080 2 1
+    Line -20 35 50 -35 #000080 2 1
+    Line 0 40 0 -20 #000080 2 1
+    Line 0 -20 0 -20 #000080 2 1
+    Line -16 19 7 0 #000000 1 1
+    Line -16 -19 7 0 #ff0000 1 1
+    Line -13 -22 0 7 #ff0000 1 1
+    Text 4 -34 10 #000000 0 "V+"
+    Text 4 22 10 #000000 0 "V-"
+    .PortSym -30 -20 1 0
+    .PortSym -30 20 2 0
+    .PortSym 0 -40 3 270
+    .PortSym 0 40 4 90
+    .PortSym 40 0 5 180
+  </Symbol>
+</Component>
+
+<Component TLE2021>
+  <Description>
+    BJT operational amplifier
+    internally frequency-compensated
+    +20V/-20V, 2MHz, macro model for +5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2021 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "2.166e-11" "0" ""
+      C:C2 _net6 _net7 "3e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="7.48e+007" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-1e+007" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="1e+007" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="1e+007" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-1e+007" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0003204" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="1.013e-009" T="0"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:IEE _net10 _net3 I="2.405e-005"
+      _BJT:Q1 _net2 _net11 _net13 Type="pnp" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="480" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q2 _net1 _net12 _net14 Type="pnp" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="480" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net4 _net11 R="3121" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net4 _net12 R="3121" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE1 _net13 _net10 R="963.4" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RE2 _net14 _net10 R="963.4" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:REE _net10 _net99 R="8.316e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="63" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="62" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="34250" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="1.4"
+      Vdc:VE _cnet2 _net4 U="1.4"
+      Vdc:VLP _cnet3 gnd U="2.1"
+      Vdc:VLN _cnet4 _net92 U="2.1"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLE2027>
+  <Description>
+    low-noise BJT operational amplifier
+    internally frequency-compensated
+    +19V/-19V, 15MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2027 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "4.003e-12" "0" ""
+      C:C2 _net6 _net7 "2e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="9.548e+008" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-1e+009" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="1e+009" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="1e+009" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-1e+009" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.002062" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="5.313e-010" T="0"
+      Idc:IEE _net4 _net10 I="5.601e-005"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      _BJT:Q1 _net2 _net11 _net13 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="7000" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q2 _net1 _net12 _net14 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="7000" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net3 _net11 R="530.5" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net3 _net12 R="530.5" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      VCCS:GE1 _net10 _net13 _net10 _net13 G="0.002543" T="0"
+      VCCS:GE2 _net10 _net14 _net10 _net14 G="0.002543" T="0"
+      R:REE _net10 _net99 R="3.571e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="8013" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="2.4"
+      Vdc:VE _cnet2 _net4 U="2.1"
+      Vdc:VLP _cnet3 gnd U="40"
+      Vdc:VLN _cnet4 _net92 U="40"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLE2037>
+  <Description>
+    low-noise BJT operational amplifier
+    internally frequency-compensated
+    +19V/-19V, 15MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2037 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "1.474e-11" "0" ""
+      C:C2 _net6 _net7 "7.5e-12" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="9.234e+008" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-8e+008" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="8e+008" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="8e+008" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-8e+008" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.002121" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="5.977e-010" T="0"
+      Idc:IEE _net4 _net10 I="5.626e-005"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      _BJT:Q1 _net2 _net11 _net13 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="7031" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q2 _net1 _net12 _net14 Type="npn" Is="8e-016" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="7031" Br="1" Rbm="0" Rc="0" "0" Re="0" Rb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0" Xtf="0" Vtf="0" Itf="0" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC1 _net3 _net11 R="471.5" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RC2 _net3 _net12 R="471.5" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      VCCS:GE1 _net10 _net13 _net10 _net13 G="0.002232" T="0"
+      VCCS:GE2 _net10 _net14 _net10 _net14 G="0.002232" T="0"
+      R:REE _net10 _net99 R="3.555e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="8013" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="2.4"
+      Vdc:VE _cnet2 _net4 U="2.1"
+      Vdc:VLP _cnet3 gnd U="40"
+      Vdc:VLN _cnet4 _net92 U="40"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLE2061>
+  <Description>
+    low-power JFET operational amplifier
+    high output-drive (100 ohms)
+    internally frequency-compensated
+    +19V/-19V, 2MHz, macro model for +-5V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2061 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "3.373e-12" "0" ""
+      C:C2 _net6 _net7 "3e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="1.545e+006" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-2e+006" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="2e+006" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="2e+006" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-2e+006" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001885" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="3.028e-008" T="0"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      Idc:ISS _net10 _net3 I="0.000102"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-0.241" Beta="0.0006967" Lambda="0" Rd="0" Rs="0" Is="1.5e-012" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-0.241" Beta="0.0006967" Lambda="0" Rd="0" Rs="0" Is="1.5e-012" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="5305" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="5305" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="140" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="140" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="56180" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="1.961e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="1.95"
+      Vdc:VE _cnet2 _net4 U="1.75"
+      Vdc:VLP _cnet3 gnd U="50"
+      Vdc:VLN _cnet4 _net92 U="50"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLE2071>
+  <Description>
+    low-noise JFET operational amplifier
+    internally frequency-compensated
+    +19V/-19V, 10MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2071 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "1.2e-12" "0" ""
+      C:C2 _net6 _net7 "1e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="5.607e+006" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-6e+006" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="6e+006" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="6e+006" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-6e+006" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.000333" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="7.436e-009" T="0"
+      Idc:ISS _net10 _net3 I="0.0004"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-0.564" Beta="0.0005545" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-0.564" Beta="0.0005545" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="3003" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="3003" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="80" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="80" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="23000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="500000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="1.7"
+      Vdc:VE _cnet2 _net4 U="1.7"
+      Vdc:VLP _cnet3 gnd U="45"
+      Vdc:VLN _cnet4 _net92 U="45"
+    .Def:End
+  </Model>
+</Component>
+
+<Component TLE2081>
+  <Description>
+    JFET operational amplifier
+    internally frequency-compensated
+    +19V/-19V, 10MHz, macro model for +-15V
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_TLE2081 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C1 _net11 _net12 "1.2e-12" "0" ""
+      C:C2 _net6 _net7 "1e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="5.607e+006" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-6e+006" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="6e+006" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="6e+006" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-6e+006" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.000333" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="7.436e-009" T="0"
+      Idc:ISS _net10 _net3 I="0.0004"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1k" T="0"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-0.564" Beta="0.0005545" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-0.564" Beta="0.0005545" Lambda="0" Rd="0" Rs="0" Is="1.5e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="3003" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="3003" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="80" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="80" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="23000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="500000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="1.7"
+      Vdc:VE _cnet2 _net4 U="1.7"
+      Vdc:VLP _cnet3 gnd U="45"
+      Vdc:VLN _cnet4 _net92 U="45"
+    .Def:End
+  </Model>
+</Component>
+
+<Component AD8065>
+  <Description>
+    very high-speed JFET-input operational amplifier
+    rail-to-rail output
+    +5V...+24V, 145MHz, macro model
+    Manufacturer: Analog Devices
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_AD8065 _net1 _net2 _net99 _net50 _net30 Package="8DIP-OpAmp"
+      Vdc:VOS _net9 _net2 U="1.5mV"
+      C:CD _net1 _net2 C="4.5p" "0" ""
+      C:CCM1 _net1 gnd C="2.1p" "0" ""
+      C:CCM2 _net2 gnd C="2.1p" "0" ""
+      JFET:J1 _net1 _net10 _net5 Type="nfet" Vt0="0.13" Beta="100" Lambda="0" Rd="0" Rs="0" Is="2.4e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net9 _net11 _net6 Type="nfet" Vt0="0.13" Beta="100" Lambda="0" Rd="0" Rs="0" Is="2.4e-013" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R3 _net99 _net5 R="1132" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R4 _net99 _net6 R="1132" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R5 _net10 _net4 R="390" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R6 _net11 _net4 R="390" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Idc:I11 _net50 _net4 I="0.00087"
+      VCVS:ECM1 _net2 _net80 _net155 _net15 G="0.5" T="0"
+      VCVS:ECM2 _net1 _net155 _net15 _net15 G="0.5" T="0"
+      VCCS:GCM1 _net80 _net15 _net81 _net15 G="4e-006" T="0"
+      L:LCM1 _net81 _net82 L="0.002" "0" ""
+      R:RCM1 _net82 _net15 R="1k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      VCVS:ECC _net99 _net98 gnd gnd G="1" T="0"
+      VCVS:ESS _net50 _net52 gnd gnd G="1" T="0"
+      VCVS:EREF1 _net99 _net15 _net150 gnd G="0.5" T="0"
+      VCVS:EREF2 _net50 _net150 gnd gnd G="0.5" T="0"
+      VCCS:G1 _net5 _net13 _net15 _net6 G="0.6" T="0"
+      R:R7 _net13 _net15 R="3.125k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      C:C3 _net13 _net15 C="3n" "0" ""
+      Vdc:V1 _net98 _net14 U="1"
+      Vdc:V2 _net16 _net52 U="1"
+      Diode:D1 _net14 _net13 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D2 _net13 _net16 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCCS:G2 _net13 _net15 _net43 _net15 G="3.777e-3" T="0"
+      R:R10 _net15 _net43 R="265" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      C:C5 _net15 _net43 C="1.8p" "0" ""
+      VCCS:G3 _net43 _net15 _net53 _net15 G="7.54e-3" T="0"
+      R:R11 _net15 _net53 R="133" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      C:C6 _net15 _net53 C="1.8p" "0" ""
+      VCCS:G4 _net53 _net15 _net63 _net15 G="7.54e-3" T="0"
+      R:R12 _net15 _net63 R="133" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      C:C7 _net15 _net63 C="1.8p" "0" ""
+      VCCS:GBUF _net63 _net15 _net32 _net15 G="0.001" T="0"
+      R:RBUF _net32 _net15 R="1000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R18 _net25 _net90 R="0.02" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R19 _net25 _net51 R="0.02" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      VCCS:G6 _net99 _net25 _net90 _net32 G="50" T="0"
+      VCCS:G7 _net32 _net51 _net25 _net50 G="50" T="0"
+      Vdc:V4 _net26 _net25 U="-0.82"
+      Vdc:V5 _net25 _net27 U="-0.82"
+      Diode:D5 _net26 _net32 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D6 _net32 _net27 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      CCCS:FO1 _net25 _net15 _net70 _net30 G="1" T="0"
+      Diode:D7 _net71 _net70 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D8 _net70 _net72 Is="1e-015" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EREFQ _net30 _net96 gnd gnd G="1" T="0"
+      Idc:IQ _net50 _net99 I="5.7mA"
+      CCCS:FQ11 _net99 _net96 _net99 _net90 G="1" T="0"
+      CCCS:FQ12 _net71 _net96 _net99 _net15 G="-1" T="0"
+      CCCS:FQ21 _net51 _net50 _net96 _net50 G="1" T="0"
+      CCCS:FQ22 _net15 _net50 _net96 _net72 G="-1" T="0"
+    .Def:End
+  </Model>
+</Component>
+
+<Component OPA445>
+  <Description>
+    high-voltage operational amplifier
+    internally frequency-compensated
+    +45V/-45V, 2MHz, 15mA output current
+    macro model
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_OPA445 _net1 _net2 _net3 _net4 _net5 Package="8DIP-OpAmp"
+      C:C2CM _net2 _net99 C="1.5e-12" "0" ""
+      C:C1CM _net1 _net99 C="1.5e-12" "0" ""
+      C:CDIF _net1 _net2 C="1e-12" "0" ""
+      R:RQ _net3 _net4 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Idc:IQ2 _net4 gnd I="0.002795"
+      CCCS:FQ2 _net22 gnd _net4 gnd G="-1" T="0"
+      Idc:IQ1 gnd _net3 I="0.002795"
+      CCCS:FQ1 _net21 _net3 gnd gnd G="1" T="0"
+      Diode:DQ2 _net20 _net22 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DQ1 _net21 _net20 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      CCCS:FQ3 _net7 gnd _net20 _cnet2 G="1" T="0"
+      Vdc:VLN _cnet4 _net92 U="26"
+      Vdc:VLP _cnet5 gnd U="26"
+      Vdc:VE _cnet6 _net4 U="5"
+      Vdc:VC _cnet7 _net53 U="5"
+      R:RSS _net10 _net99 R="987700" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="25" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net4 _net12 R="5305" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net4 _net11 R="5305" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      VCCS:G213 _net4 _net1 _net4 _net1 G="1e-012" T="0"
+      VCCS:G212 _net12 _net1 _net4 _net1 G="1e-012" T="0"
+      VCCS:G211 _net10 _net1 _net4 _net1 G="1e-012" T="0"
+      VCCS:G113 _net4 _net2 _net4 _net2 G="1e-012" T="0"
+      VCCS:G112 _net11 _net2 _net4 _net2 G="1e-012" T="0"
+      VCCS:G111 _net10 _net2 _net4 _net2 G="1e-012" T="0"
+      JFET:J2 _net1 _net12 _net10 Type="pfet" Vt0="-1" Beta="8.773e-005" Lambda="0" Rd="0" Rs="0" Is="1e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J1 _net2 _net11 _net10 Type="pfet" Vt0="-1" Beta="8.773e-005" Lambda="0" Rd="0" Rs="0" Is="1e-011" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      CCVS:HLIM _cnet2 _net90 gnd _net8 G="1k" T="0"
+      Idc:ISS _net10 _net3 I="0.0002025"
+      VCCS:GCM _net10 gnd _net6 _net99 G="3.352e-009" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="0.0001885" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-4e+007" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet5 G="4e+007" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet6 G="4e+007" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet7 G="-4e+007" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="3.774e+007" T="0"
+      VCVS:EGND1 _net4 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND1 _net3 _net991 gnd gnd G="0.5" T="0"
+      Diode:DP _net3 _net4 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DC _net53 _net5 Is="8e-016" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net6 _net7 C="1.5e-11" "0" ""
+      C:C1 _net11 _net12 C="5.252e-12" "0" ""
+    .Def:End
+  </Model>
+</Component>
+
+<Component OPA544>
+  <Description>
+    high-power operational amplifier
+    internally frequency-compensated
+    +10...35V/-10...35V, 1.4MHz, macro model
+    2.0A output current (TO-220 package)
+    Manufacturer: Texas Instruments
+  </Description>
+  <Model>
+    .Def:LM_OpAmps_OPA544 _net1 _net2 _net3 _net4 _net5
+      C:C1 _net11 _net12 C="2.2e-12" "0" ""
+      C:C2 _net6 _net7 C="1e-11" "0" ""
+      Diode:DC _net53 _net5 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DE _net5 _net54 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLP _net91 _net90 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DLN _net90 _net92 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:DP _net3 _net4 Is="8e-16" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      VCVS:EGND1 _net3 _net99 _net991 gnd G="0.5" T="0"
+      VCVS:EGND2 _net4 _net991 gnd gnd G="0.5" T="0"
+      CCCS:FB1 _net9 _net7 _net99 gnd G="9.446e+9" T="0"
+      CCCS:FB2 _net3 _net7 _net99 _cnet1 G="-9e+9" T="0"
+      CCCS:FB3 _net54 _net7 _net99 _cnet2 G="9e+9" T="0"
+      CCCS:FB4 _net91 _net7 _net99 _cnet3 G="9e+9" T="0"
+      CCCS:FB5 gnd _net7 _net99 _cnet4 G="-9e+9" T="0"
+      VCCS:GA _net11 _net6 gnd _net12 G="8.796e-5" T="0"
+      VCCS:GCM _net10 gnd _net6 _net99 G="4.409e-10" T="0"
+      Idc:ISS _net4 _net10 I="8e-5"
+      CCVS:HLIM _net7 _net90 gnd _net8 G="1000" T="0"
+      JFET:J1 _net2 _net11 _net10 Type="nfet" Vt0="-1" Beta="9.672e-005" Lambda="0" Rd="0" Rs="0" Is="7.5e-012" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      JFET:J2 _net1 _net12 _net10 Type="nfet" Vt0="-1" Beta="9.672e-005" Lambda="0" Rd="0" Rs="0" Is="7.5e-012" N="1" Isr="1e-014" Nr="2" Cgs="0" Cgd="0" Pb="1" Fc="0.5" M="0.5" Kf="0" Af="1" Ffe="1" Temp="26.85" Xti="3" Vt0tc="0" Betatce="0" Tnom="26.85" Area="1" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:R2 _net6 _net9 R="100000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD1 _net3 _net11 R="11370" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD2 _net3 _net12 R="11370" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO1 _net8 _net5 R="0.17" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RO2 _net7 _net99 R="0.17" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RP _net3 _net4 R="5833" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RSS _net10 _net99 R="2.5e6" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Vdc:VC _cnet1 _net53 U="4.4"
+      Vdc:VE _cnet2 _net4 U="3.8"
+      Vdc:VLP _cnet3 gnd U="4000"
+      Vdc:VLN _cnet4 _net92 U="4000"
+    .Def:End
+  </Model>
+  <Symbol>
+    .ID 30 14 X
+    Line -30 -20 10 0 #000080 2 1
+    Line -30 20 10 0 #000080 2 1
+    Line 30 0 10 0 #000080 2 1
+    Line -20 -35 0 70 #000080 2 1
+    Line -20 -35 50 35 #000080 2 1
+    Line -20 35 50 -35 #000080 2 1
+    Line 0 40 0 -20 #000080 2 1
+    Line 0 -20 0 -20 #000080 2 1
+    Line -16 19 7 0 #000000 1 1
+    Line -16 -19 7 0 #ff0000 1 1
+    Line -13 -22 0 7 #ff0000 1 1
+    Text 4 -34 10 #000000 0 "V+"
+    Text 4 22 10 #000000 0 "V-"
+    .PortSym -30 -20 1 0
+    .PortSym -30 20 2 0
+    .PortSym 0 -40 3 270
+    .PortSym 0 40 4 90
+    .PortSym 40 0 5 180
+  </Symbol>
+</Component>
