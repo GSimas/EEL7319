@@ -1,6 +1,6 @@
 <QucsStudio Schematic 3.3.2>
 <Properties>
-View=0,-282,1668,772,1,0,120
+View=0,-282,1668,862,1,0,240
 Grid=10,10,1
 DataSet=*.dat
 DataDisplay=*.dpl
@@ -83,8 +83,9 @@ Text 278 518 12 #aa00ff 0 "Quadripolo"
 Text 108 528 15 #00a800 0 "Circuito 1.2"
 Text 958 -202 14 #aa0000 0 "Completar"
 Arrow 1000 -170 0 50 16 4 #aa0000 2 1 0
-Text 768 578 15 #00ac53 0 "- Circuito 1.2 com voltímetros V1_2, V2_2 e amperímetro I2_2 \n utilizados para verificar caso em que I1 = 0 do quadripolo referente \n de modo a se obter Z1_2 e Z2_2 apresentados nas respectivas equações \n  \n - Z2_2 sendo impedância "vista pela fonte V2" quando I1 = 0 \n - Z1_2 sendo "impedância de transferência" de port 1 para 2"
-Text 768 88 15 #0000ff 0 "- Circuito 1.1 com voltímetros V1_1, V2_1 e amperímetro I1_1 \n utilizados para verificar caso em que I2 = 0 do quadripolo referente \n de modo a se obter Z1_1 e Z2_1 apresentados respectivas equações \n  \n - Z1_1 sendo impedância "vista pela fonte V1" quando I2 = 0 \n - Z2_1 sendo "impedância de transferência" de port 2 para 1"
+Text 768 578 15 #00ac53 0 "- Circuito 1.2 com voltímetros V1_2, V2_2 e amperímetro I2_2 \n utilizados para verificar caso em que I1 = 0 do quadripolo referente \n de modo a se obter Z1_2 e Z2_2 apresentados nas respectivas equações \n  \n - Z2_2 sendo impedância "vista pela fonte ideal V2" quando I1 = 0 \n - Z1_2 sendo "impedância de transferência/imagem" em relação a ports 1 e 2"
+Text 768 88 15 #0000ff 0 "- Circuito 1.1 com voltímetros V1_1, V2_1 e amperímetro I1_1 \n utilizados para verificar caso em que I2 = 0 do quadripolo referente \n de modo a se obter Z1_1 e Z2_1 apresentados respectivas equações \n  \n - Z1_1 sendo impedância "vista pela fonte ideal V1" quando I2 = 0 \n - Z2_1 sendo "impedância de transferência/imagem" em relação a ports 2 e 1"
 Text 58 -72 15 #ff5500 0 "- Explicar cada parte deste diagrama \n - Completar as equações para extrair a matriz de impedâncias completa."
 Text 68 -262 15 #000000 0 "Universidade Federal de Santa Catarina (UFSC) \n Centro Tecnológico (CTC) \n Departamento de Engenharia Elétrica e Eletrônica (EEL) \n Disciplina EEL7319 - Circuitos RF \n Semestre 2020/1 \n Aluno Gustavo Simas da Silva"
+Text 98 318 15 #ff5500 0 "- Para redes recíprocas Z1_2 = Z2_1 \n - Para redes simétricas Z1_1 = Z2_2 \n "
 </Paintings>
