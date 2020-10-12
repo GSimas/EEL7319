@@ -1,0 +1,12 @@
+# install4j response file for SimSmith 17.3
+createDesktopLinkAction$Boolean=false
+createQuicklaunchIconAction$Boolean=false
+executeLauncherAction$Boolean=true
+sys.adminRights$Boolean=true
+sys.fileAssociation.extensions$StringArray="ssx","ss","s1p"
+sys.fileAssociation.launchers$StringArray="23","23","23"
+sys.installationDir=C\:\\Users\\Gustavo Simas\\Documents\\Github\\EEL7319\\SimSmith
+sys.languageId=en
+sys.programGroupAllUsers$Boolean=true
+sys.programGroupDisabled$Boolean=true
+sys.programGroupName=SimSmith

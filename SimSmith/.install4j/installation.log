@@ -1,0 +1,543 @@
+[INFO] logger started at Mon Oct 12 17:02:14 BRT 2020
+[INFO] executable name: C:\Users\Gustavo Simas\Downloads\FixedInstallers_17.3\windows64-with-JRE.exe
+[INFO] install4j version: 8.0.2 (build 8057)
+[INFO] Properties: 
+-- listing properties --
+java.runtime.name=Java(TM) SE Runtime Environment
+exe4j.moduleName=C:\Users\Gustavo Simas\Downloads\Fixe...
+sun.boot.library.path=c:\users\gustav~1\appdata\local\temp\...
+exe4j.semaphoreName=Local\c:_users_gustavo_simas_download...
+java.vm.version=25.241-b07
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+exe4j.consoleCodepage=cp0
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.script=
+user.country=BR
+sun.os.patch.level=
+install4j.exeDir=C:\Users\Gustavo Simas\Downloads\Fixe...
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\GUSTAV~1\AppData\Local\Temp\...
+java.runtime.version=1.8.0_241-b07
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=c:\users\gustav~1\appdata\local\temp\...
+os.arch=amd64
+java.io.tmpdir=C:\Users\GUSTAV~1\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+exe4j.tempDir=C:\Users\GUSTAV~1\AppData\Local\Temp\...
+os.name=Windows 10
+sun.java2d.noddraw=true
+sun.jnu.encoding=Cp1252
+java.library.path=c:\users\gustav~1\appdata\local\temp\...
+sun.awt.enableExtraMouseButtons=true
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+exe4j.isInstall4j=true
+os.version=10.0
+user.home=C:\Users\Gustavo Simas
+user.timezone=America/Sao_Paulo
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+java.specification.version=1.8
+file.encoding=Cp1252
+user.name=Gustavo Simas
+java.class.path=C:\Users\GUSTAV~1\AppData\Local\Temp\...
+java.vm.specification.version=1.8
+sun.arch.data.model=64
+java.home=c:\users\gustav~1\appdata\local\temp\...
+sun.java.command=C:\Users\Gustavo Simas\Downloads\Fixe...
+exe4j.launchName=C:\Users\Gustavo Simas\Downloads\Fixe...
+java.specification.vendor=Oracle Corporation
+user.language=pt
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+exe4j.unextractedPosition=54743360
+java.version=1.8.0_241
+java.ext.dirs=c:\users\gustav~1\appdata\local\temp\...
+sun.boot.class.path=c:\users\gustav~1\appdata\local\temp\...
+java.vendor=Oracle Corporation
+install4j.appDir=C:\Users\Gustavo Simas\AppData\Local\...
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+sun.desktop=windows
+sun.cpu.isalist=amd64
+[INFO] Variable changed: sys.resolveUserSpecificInstallationDir=false[class java.lang.String]
+[INFO] my modules file null, null
+[INFO] com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction [ID 33]: Execute action
+       Property allRequested: false
+       Property failIfNotObtainedMac: true
+       Property failIfNotObtainedWin: true
+       Property failIfNotRootUnix: false
+       Property obtainIfAdminMac: false
+       Property obtainIfAdminWin: true
+       Property obtainIfNormalMac: true
+       Property obtainIfNormalWin: true
+       Property rollbackSupported: false
+       Property updateInstallationDirectory: true
+       Using communication backend com.install4j.runtime.installer.platform.win32.Win32CommunicationBackend
+       Execute action successful after 10787 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 1]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 2]: Show screen
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 2]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 24]: Show screen
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 24]: command: go back 1 screens using history
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 2]: Show screen
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 2]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 24]: Show screen
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 24]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 4]: Show screen
+       Variable changed: sys.installationDir=C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith[class java.lang.String]
+       checking writable with maximum
+[INFO] com.install4j.runtime.beans.actions.misc.LoadResponseFileAction [ID 5]: Execute action
+       Property excludedVariables: [sys.installationDir]
+       Property file: null
+       Property overwriteStrategy: Do not overwrite command line
+       Property registerForResponseFile: true
+       Property rollbackSupported: false
+       Response file C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\response.varfile does not exist
+       Execute action successful after 14 ms
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 4]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.StandardProgramGroupScreen [ID 7]: Show screen
+       Variable changed: sys.programGroupName=SimSmith[class java.lang.String]
+       Variable changed: sys.programGroupDisabled=true[class java.lang.Boolean]
+       Variable changed: sys.programGroupAllUsers=true[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.screens.StandardProgramGroupScreen [ID 7]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FileAssociationsScreen [ID 26]: Show screen
+       Variable changed: sys.fileAssociation.extensions=[ssx, ss, s1p][class [Ljava.lang.String;]
+       Variable changed: sys.fileAssociation.launchers=[23, 23, 23][class [Ljava.lang.String;]
+[INFO] com.install4j.runtime.beans.screens.FileAssociationsScreen [ID 26]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.AdditionalConfirmationsScreen [ID 153]: Show screen
+       Variable changed: createQuicklaunchIconAction=false[class java.lang.Boolean]
+       Variable changed: createDesktopLinkAction=false[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.screens.AdditionalConfirmationsScreen [ID 153]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Show screen
+[INFO] com.install4j.runtime.beans.actions.InstallFilesAction [ID 9]: Execute action
+       Property directoryResolverScript: null
+       Property fileFilterScript: null
+       Property sizeCalculatorScript: null
+       Property acceptAllCertificates: false
+       Property checkFreeSpace: true
+       Property delay: false
+       Property installRuntime: true
+       Property rollbackSupported: true
+       Property saveDownloadedFiles: false
+       Property showFileNames: true
+       Property triggerReboot: false
+       Property updateBundledJre: true
+       Property validateApplicationId: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-console-l1-1-0.dll; size: 21032 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:46 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-datetime-l1-1-0.dll; size: 20512 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-debug-l1-1-0.dll; size: 20544 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-errorhandling-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-file-l1-1-0.dll; size: 24104 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-file-l1-2-0.dll; size: 20520 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:47 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-file-l2-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-handle-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-heap-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-interlocked-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-libraryloader-l1-1-0.dll; size: 21568 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-localization-l1-2-0.dll; size: 23080 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-memory-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-namedpipe-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-processenvironment-l1-1-0.dll; size: 21544 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-processthreads-l1-1-0.dll; size: 22560 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-processthreads-l1-1-1.dll; size: 21056 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-profile-l1-1-0.dll; size: 20008 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-rtlsupport-l1-1-0.dll; size: 21056 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-string-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-synch-l1-1-0.dll; size: 22568 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-synch-l1-2-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-sysinfo-l1-1-0.dll; size: 21544 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-timezone-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-core-util-l1-1-0.dll; size: 20520 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-conio-l1-1-0.dll; size: 21544 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-convert-l1-1-0.dll; size: 24616 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-environment-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-filesystem-l1-1-0.dll; size: 22568 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-heap-l1-1-0.dll; size: 21544 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-locale-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-math-l1-1-0.dll; size: 29528 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-multibyte-l1-1-0.dll; size: 28736 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-private-l1-1-0.dll; size: 73048 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-process-l1-1-0.dll; size: 21568 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-runtime-l1-1-0.dll; size: 25128 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-stdio-l1-1-0.dll; size: 26664 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-string-l1-1-0.dll; size: 26664 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-time-l1-1-0.dll; size: 23080 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\api-ms-win-crt-utility-l1-1-0.dll; size: 21032 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\attach.dll; size: 23064 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\awt.dll; size: 1524760 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\bci.dll; size: 17944 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\concrt140.dll; size: 332336 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\dcpr.dll; size: 160792 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\decora_sse.dll; size: 88600 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\deploy.dll; size: 584216 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:48 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\dtplugin\deployJava1.dll; size: 1030168 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\dtplugin\npdeployJava1.dll; size: 1154584 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\dt_shmem.dll; size: 30744 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\dt_socket.dll; size: 25624 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\eula.dll; size: 137240 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\fontmanager.dll; size: 281624 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\fxplugins.dll; size: 189976 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\glass.dll; size: 271384 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\glib-lite.dll; size: 670744 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\gstreamer-lite.dll; size: 883224 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\hprof.dll; size: 159256 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\instrument.dll; size: 124952 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\j2pcsc.dll; size: 19992 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\j2pkcs11.dll; size: 67608 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jaas_nt.dll; size: 21528 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jabswitch.exe; size: 35352 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\java-rmi.exe; size: 16408 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\java.dll; size: 160280 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\java.exe; size: 207896 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\JavaAccessBridge-64.dll; size: 148504 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:46 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javacpl.cpl; size: 196632 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:48 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javacpl.exe; size: 85016 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javafx_font.dll; size: 72728 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javafx_iio.dll; size: 166424 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javaw.exe; size: 208408 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\javaws.exe; size: 355352 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\java_crw_demo.dll; size: 30744 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jawt.dll; size: 15384 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\JAWTAccessBridge-64.dll; size: 16408 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:46 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jdwp.dll; size: 203288 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:48 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jfr.dll; size: 28184 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jfxmedia.dll; size: 146968 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jfxwebkit.dll; size: 59057688 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:49 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jjs.exe; size: 16408 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jli.dll; size: 176152 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jp2iexp.dll; size: 307224 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:50 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jp2launcher.exe; size: 123928 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jp2native.dll; size: 21016 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jp2ssv.dll; size: 245272 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jpeg.dll; size: 187928 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jsdt.dll; size: 19480 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jsound.dll; size: 36376 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\jsoundds.dll; size: 32280 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\keytool.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\kinit.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\klist.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\ktab.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\lcms.dll; size: 244248 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\management.dll; size: 37912 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\mlib_image.dll; size: 654872 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\msvcp140.dll; size: 627440 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\msvcr100.dll; size: 829264 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\net.dll; size: 98840 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\nio.dll; size: 61976 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\npt.dll; size: 19992 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\orbd.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\pack200.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\plugin2\msvcr100.dll; size: 829264 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\plugin2\npjp2.dll; size: 246808 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\policytool.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\prism_common.dll; size: 61976 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\prism_d3d.dll; size: 132632 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\prism_sw.dll; size: 99864 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\resource.dll; size: 16408 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:51 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\rmid.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\rmiregistry.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\sawindbg.dll; size: 56856 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\server\jvm.dll; size: 8868376 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\server\Xusage.txt; size: 1423 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\servertool.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\splashscreen.dll; size: 207896 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\ssv.dll; size: 582168 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:52 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\ssvagent.exe; size: 76312 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\sunec.dll; size: 136728 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\sunmscapi.dll; size: 33816 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\t2k.dll; size: 258584 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\tnameserv.exe; size: 16920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\ucrtbase.dll; size: 1026088 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\unpack.dll; size: 80920 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\unpack200.exe; size: 200728 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\vcruntime140.dll; size: 85232 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\verify.dll; size: 50200 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\w2k_lsa_auth.dll; size: 25112 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\WindowsAccessBridge-64.dll; size: 129048 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:46 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\wsdetect.dll; size: 193560 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:52 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\bin\zip.dll; size: 79384 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\COPYRIGHT; size: 3244 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:45 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\accessibility.properties; size: 149 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:52 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\amd64\jvm.cfg; size: 634 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\calendars.properties; size: 1482 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:53 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\charsets.jar; size: 3090355 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:01 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\classlist; size: 84355 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:53 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\cmm\CIEXYZ.pf; size: 51236 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\cmm\GRAY.pf; size: 632 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\cmm\LINEAR_RGB.pf; size: 1044 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\cmm\PYCC.pf; size: 274474 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:54 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\cmm\sRGB.pf; size: 3144 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\content-types.properties; size: 5548 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\currency.data; size: 4102 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\ffjcext.zip; size: 14156 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages.properties; size: 2860 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_de.properties; size: 3306 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_es.properties; size: 3600 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_fr.properties; size: 3409 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_it.properties; size: 3223 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_ja.properties; size: 6349 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:55 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_ko.properties; size: 5712 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_pt_BR.properties; size: 3285 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_sv.properties; size: 3384 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_zh_CN.properties; size: 4072 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_zh_HK.properties; size: 3752 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\messages_zh_TW.properties; size: 3752 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\splash.gif; size: 8590 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\splash@2x.gif; size: 15276 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\splash_11-lic.gif; size: 7805 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy\splash_11@2x-lic.gif; size: 12250 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\deploy.jar; size: 5049236 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:01 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\access-bridge-64.jar; size: 196008 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:05 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\cldrdata.jar; size: 3837893 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:06 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\dnsns.jar; size: 8150 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\jaccess.jar; size: 43839 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\jfxrt.jar; size: 18198521 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:07 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\localedata.jar; size: 2246376 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\meta-index; size: 1461 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:55 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\nashorn.jar; size: 1983388 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:08 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\sunec.jar; size: 60191 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:56 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\sunjce_provider.jar; size: 280703 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\sunmscapi.jar; size: 33138 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\sunpkcs11.jar; size: 279404 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:57 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\ext\zipfs.jar; size: 67559 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:08 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\flavormap.properties; size: 3928 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:57 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fontconfig.bfc; size: 3778 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fontconfig.properties.src; size: 10578 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaBrightDemiBold.ttf; size: 75144 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaBrightDemiItalic.ttf; size: 75124 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaBrightItalic.ttf; size: 80856 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaBrightRegular.ttf; size: 344908 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:58 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaSansDemiBold.ttf; size: 317896 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaSansRegular.ttf; size: 698236 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaTypewriterBold.ttf; size: 234068 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\fonts\LucidaTypewriterRegular.ttf; size: 242700 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\hijrah-config-umalqura.properties; size: 13962 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\cursors.properties; size: 1280 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\invalid32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_CopyDrop32x32.gif; size: 165 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_CopyNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_LinkDrop32x32.gif; size: 168 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_LinkNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_MoveDrop32x32.gif; size: 147 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\images\cursors\win32_MoveNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\javafx.properties; size: 56 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\javaws.jar; size: 956710 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:02 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jce.jar; size: 115646 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:58 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jfr\default.jfc; size: 20702 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jfr\profile.jfc; size: 20658 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jfr.jar; size: 571127 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:02 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jfxswt.jar; size: 33464 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jsse.jar; size: 684969 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:03 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\jvm.hprof.txt; size: 4226 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:58 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\logging.properties; size: 2455 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\management\jmxremote.access; size: 3998 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\management\jmxremote.password.template; size: 2856 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:59 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\management\management.properties; size: 14630 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\management\snmp.acl.template; size: 3376 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\management-agent.jar; size: 370 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:03 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\meta-index; size: 2126 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:59 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\net.properties; size: 5352 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\plugin.jar; size: 1924074 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:03 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\psfont.properties.ja; size: 2796 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:59 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\psfontj2d.properties; size: 10393 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\resources.jar; size: 3515961 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:03 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\rt.jar; size: 63731012 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:05 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\blacklist; size: 4054 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:59 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\blacklisted.certs; size: 1253 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:02:00 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\cacerts; size: 105352 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\java.policy; size: 2466 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\java.security; size: 46199 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\javaws.policy; size: 98 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\policy\limited\local_policy.jar; size: 3527 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\policy\limited\US_export_policy.jar; size: 3026 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\policy\unlimited\local_policy.jar; size: 3035 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\policy\unlimited\US_export_policy.jar; size: 3023 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\security\trusted.libraries; size: 0 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\sound.properties; size: 1210 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\tzdb.dat; size: 107579 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\lib\tzmappings; size: 9577 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\LICENSE; size: 44 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:45 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\README.txt; size: 46 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\THIRDPARTYLICENSEREADME-JAVAFX.txt; size: 116400 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:01:46 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\THIRDPARTYLICENSEREADME.txt; size: 169788 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\jre\Welcome.html; size: 955 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4jdel.exe; size: 91168 bytes; exists: false
+       File options set to: [fileTime: Fri Oct 09 18:28:24 BRT 2020, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4jinst.dll; size: 179096 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\SimSmith.exe; size: 403456 bytes; exists: false
+       File options set to: [fileTime: Fri Oct 09 18:28:24 BRT 2020, mode: 755, overwriteMode: If newer otherwise ask, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\SimSmith.jar; size: 69129175 bytes; exists: false
+       File options set to: [fileTime: Fri Oct 09 18:28:24 BRT 2020, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\SimSmith.vmoptions; size: 248 bytes; exists: false
+       File options set to: [fileTime: Fri Oct 09 18:28:24 BRT 2020, mode: 644, overwriteMode: Never, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\uninstall.exe; size: 733696 bytes; exists: false
+       File options set to: [fileTime: Fri Oct 09 18:28:24 BRT 2020, mode: 700, overwriteMode: If newer otherwise ask, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\inst_jre.cfg; size: 68 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:03:33 BRT 2020, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\pref_jre.cfg; size: 62 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:03:33 BRT 2020, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4jruntime.jar; size: 1972157 bytes; exists: false
+       File options set to: [fileTime: Mon Oct 12 17:03:33 BRT 2020, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\MessagesDefault; size: 34270 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4jparams.conf; size: 65148 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\stats.properties; size: 250 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\user.jar; size: 12064 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_0_1eej7xy.utf8; size: 34270 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_1_1eej7xy.txt; size: 1488 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_2_1eej7xy_mm08s4.icns; size: 553478 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_3_1eej7xy_jppwjm.ico; size: 106430 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_4_1eej7xy_18gg8kx.png; size: 9202 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\i4j_extf_4_1eej7xy_18gg8kx@2x.png; size: 15419 bytes; exists: false
+       Install file: C:\Users\Gustavo Simas\Documents\Github\EEL7319\SimSmith\.install4j\installer.ico; size: 15749 bytes; exists: false
+       Execute action successful after 16150 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction [ID 11]: Execute action
+       Property icon: null
+       Property iconSource: Installer icon
+       Property itemName: SimSmith 17.3
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 956 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 27]: Execute action
+       Property description: Smith Chart Software
+       Property extension: ssx
+       Property launcherId: 23
+       Property macIconFile: i4j_extf_2_1eej7xy_mm08s4.icns
+       Property macRole: Viewer
+       Property persistentProperties: {}
+       Property unixIconFile: null
+       Property unixMimeType: 
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_3_1eej7xy_jppwjm.ico
+       Property mac: true
+       Property restartFinder: true
+       Property rollbackSupported: true
+       Property selected: true
+       Property unix: false
+       Property windows: true
+       using internal name SimSmith
+       Execute action successful after 103 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 254]: Execute action
+       Property description: Smith Chart Software
+       Property extension: ss
+       Property launcherId: 23
+       Property macIconFile: i4j_extf_2_1eej7xy_mm08s4.icns
+       Property macRole: Viewer
+       Property persistentProperties: {}
+       Property unixIconFile: null
+       Property unixMimeType: 
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_3_1eej7xy_jppwjm.ico
+       Property mac: true
+       Property restartFinder: true
+       Property rollbackSupported: true
+       Property selected: true
+       Property unix: false
+       Property windows: true
+       using internal name SimSmith
+       Execute action successful after 16 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 349]: Execute action
+       Property description: Smith Chart Software
+       Property extension: s1p
+       Property launcherId: 23
+       Property macIconFile: i4j_extf_2_1eej7xy_mm08s4.icns
+       Property macRole: Viewer
+       Property persistentProperties: {}
+       Property unixIconFile: null
+       Property unixMimeType: 
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_3_1eej7xy_jppwjm.ico
+       Property mac: true
+       Property restartFinder: true
+       Property rollbackSupported: true
+       Property selected: true
+       Property unix: false
+       Property windows: true
+       using internal name SimSmith
+       Execute action successful after 45 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 431]: Execute action
+       Property description: Smith Chart Software
+       Property extension: csv
+       Property launcherId: 23
+       Property macIconFile: i4j_extf_2_1eej7xy_mm08s4.icns
+       Property macRole: Viewer
+       Property persistentProperties: {}
+       Property unixIconFile: null
+       Property unixMimeType: 
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_3_1eej7xy_jppwjm.ico
+       Property mac: true
+       Property restartFinder: true
+       Property rollbackSupported: true
+       Property selected: false
+       Property unix: false
+       Property windows: true
+       Execute action successful after 2 ms
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 8]: Rollback barrier reached
+       command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 12]: Show screen
+       Variable changed: executeLauncherAction=true[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.actions.finish.ExecuteLauncherAction [ID 28]: Execute action
+       Property arguments: null
+       Property launcherId: 23
+       Property rollbackSupported: false
+       execute directly
+       Execute action successful after 625 ms
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 12]: command: finish
+       cleaning up
+       Finished
