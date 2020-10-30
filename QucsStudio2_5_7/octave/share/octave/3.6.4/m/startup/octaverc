@@ -1,0 +1,41 @@
+## System-wide startup file for Octave.
+##
+## This file should contain any commands that should be executed each
+## time Octave starts for every user at this site.
+
+## This startup script is customized for the Octave/Win32
+## binary distribution.
+
+## Configure readline using the file inputrc in the Octave startup
+## directory.
+
+read_readline_init_file (sprintf ("%s%s%s",
+				  octave_config_info ("startupfiledir"),
+				  filesep, "inputrc"));
+
+###########################################
+## Windows binary package specific setup ##
+###########################################
+
+# Default graphics backend
+try
+  gf = __default_graphics__;
+  switch gf
+    case "gnuplot"
+    case "fltk"
+      graphics_toolkit ("fltk");
+    case "qt"
+      graphics_toolkit ("qt");
+  endswitch
+catch
+  warning ("unable to set default graphics backend");
+end_try_catch
+
+clear msys_path gf
+
+# Set gnuplot default terminal to wxt
+putenv ("GNUTERM", "wxt");
+
+# no command prompt
+PS1("");
+fprintf (" It's up now!\n\n");

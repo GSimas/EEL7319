@@ -1,0 +1,114 @@
+// ***************************************************************************
+// * component model name
+// * dynamically linked library written in VerilogA for QucsStudio
+// *
+// * Copyright (C) 2011 by ...
+// *
+// * This is free software; you can redistribute it and/or modify
+// * it under the terms of the GNU General Public License as published by
+// * the Free Software Foundation; either version 2, or (at your option)
+// * any later version. NO WARRANTY AT ALL!
+// ***************************************************************************
+
+`include "disciplines.vams"
+`include "constants.vams"
+
+// Module name becomes name of the model file names.
+module Transistor (externalBase, Collector, Emitter); 
+  inout externalBase, Collector, Emitter;
+  electrical Base;
+
+`define attr(txt) (*txt*)
+`define GMIN 1e-10
+
+parameter real Bf=100 from [1:inf]     `attr(info="forward current gain" unit="1");
+parameter real Rbase=1 from [0:inf]    `attr(info="base resistance" unit="ohms");
+parameter real Is=1e-16 from [0:inf]   `attr(info="saturation current" unit="A");
+parameter real Vearly=100 from [0:inf] `attr(info="early voltage" unit="V");
+parameter real Cj0=0 from [0:inf]      `attr(info="zero-bias depletion capacitance" unit="F");
+parameter real Vj0=0.75 from [0:inf]   `attr(info="junction built-in potential" unit="V");
+parameter real Fc=0.5 from [0:inf]     `attr(info="depletion capacitance coefficient" unit="1");
+parameter real Mj=0.33 from [0:inf]    `attr(info="junction exponential factor" unit="1");
+parameter real Temp=26.85 from [-273.15:inf] `attr(info="simulation temperature" unit="Celsius");
+parameter real Kf=1e-9 from [0:inf]    `attr(info="flicker noise coefficient" unit="1");
+parameter real Af=0 from [0:inf]       `attr(info="flicker noise current exponent" unit="1");
+parameter real Ffe=1.0 from [0:inf]    `attr(info="flicker noise frequency exponent" unit="1");
+parameter string Type="npn"            `attr(info="transistor type [npn, pnp]");
+
+real Tj, Vtemp, Vbe, Vbc, Vce, Ibe, Ibc, Ice, Qbe;
+
+// Model branches
+branch (Base, Emitter) be;
+branch (Base, Collector) bc;
+branch (Collector, Emitter) ce;
+branch (Base, externalBase) rb;
+
+analog begin
+
+// equations that are constant during simulation
+@(initial_step)
+begin
+  Tj = Temp + `P_CELSIUS0;
+  Vtemp = `P_K * Tj / `P_Q;
+// If the parameter "Temp" exists the following expressions can be used.
+// Otherwise they refer to 300K.
+//  Tj = $temperature;  // temperature in Kelvin
+//  Vtemp = $vt;        // temperature voltage
+  if(Is > 0.1) $warning("Saturation current unusually high: %g", Is);
+  if(Vearly < 0.0001)
+  begin
+    $error("Early voltage is negative: %g", Vearly);
+    $finish;
+  end
+end;
+
+// voltages
+Vbe = V(be);
+Vbc = V(bc);
+Vce = V(Collector, Emitter);
+
+if(Type == "pnp")  // pnp transistor?
+begin
+  Vbe = -Vbe;
+  Vbc = -Vbc;
+  Vce = -Vce;
+end
+
+// current and charge equations
+Ibe = Is * (limexp(Vbe/Vtemp) - 1.0) + `GMIN*Vbe;
+Ibc = Is * (limexp(Vbc/Vtemp) - 1.0) + `GMIN*Vbc;
+Ice = Bf * (Ibe-Ibc) * (1.0 + Vce/Vearly);
+if(Vbe < (Fc*Vj0))
+  Qbe = Cj0 * pow(1 - Vbe/Vj0, 1-Mj);
+else
+  Qbe = Cj0 / pow(1 - Fc, Mj) * (1 + Mj*(Vbe - Fc*Vj0) / Vj0 / (1-Fc));
+
+if(Type != "npn")  // not npn transistor?
+begin
+  Ibe = -Ibe;
+  Ibc = -Ibc;
+  Ice = -Ice;
+end
+
+// linear resistance
+`ifdef insideQucsStudio
+R(rb) <+ Rbase;
+`else
+I(rb) <+ V(rb) / Rbase;
+`endif
+
+// current and charge contributions
+I(be) <+ Ibe;
+I(bc) <+ Ibc;
+I(ce) <+ Ice;
+I(be) <+ ddt(Qbe);
+
+// noise contributions
+I(be) <+ white_noise(2.0*`P_Q*Ibe, "shot");
+I(ce) <+ flicker_noise(Kf*pow(Ice, Af), Ffe, "flicker");
+
+// noise of linear conductance
+G(rb) <+ white_noise(4.0*`P_K*Tj/Rbase, "thermal");
+
+end
+endmodule

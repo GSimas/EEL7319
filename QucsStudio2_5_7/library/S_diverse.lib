@@ -1,0 +1,495 @@
+<QucsStudio Library 1.0.0 "diverse">
+
+<Component Qcoil>
+  <Description>
+    model of a non-ideal coil
+    consists of
+    1) series resistance
+    2) parallel capacitance
+  </Description>
+  <Model>
+    .Def:LS_diverse_Qcoil _net0 _net2 L="1 µH" fres="100 MHz" R="1"
+      L:L1 _net0 _net1 "L" ""
+      C:C1 _net2 _net0 "0.25/(pi*fres)^2/L" ""
+      R:R2 _net1 _net2 "R" "26.85" "0" "0" "26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID -20 14 L "1=L=1 µH=inductance" "1=fres=100 MHz=resonance frequency" "1=R=1=series resistance">
+    <Line -30 0 12 0 #000080 2 1>
+    <Line 18 0 12 0 #000080 2 1>
+    <EArc -18 -6 12 12 0 2880 #000080 2 1>
+    <EArc -6 -6 12 12 0 2880 #000080 2 1>
+    <EArc 6 -6 12 12 0 2880 #000080 2 1>
+    <Line -17 -11 8 0 #000080 2 1>
+    <Line -4 -11 8 0 #000080 2 1>
+    <Line 9 -11 8 0 #000080 2 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 30 0 2 180>
+  </Symbol>
+</Component>
+
+<Component RFcoil>
+  <Description>
+    Coilcraft model for RF coils
+    consists of
+    1) frequency-dependend series resistance
+    2) parallel capacitance with series resistance
+    see www.coilcraft.com/models.cfm for details
+  </Description>
+  <Model>
+    .Def:LS_diverse_RFcoil _net3 _net4 L="100 nH" Rdc="0.01" Cap="60 fF" Rcap="25" k="2.34e-4"
+      L:L1 _net0 _net1 "L" ""
+      C:C1 _net2 _net0 "Cap" ""
+      R:R2 _net3 _net0 "Rdc" "26.85" "0" "0" "26.85"
+      R:R1 _net2 _net4 "Rcap" "26.85" "0" "0" "26.85"
+      RFEDD:X1 _net1 _net4 "Y" "2" "short" "1/k/sqrt(freq)" "-1/k/sqrt(freq)" "-1/k/sqrt(freq)" "1/k/sqrt(freq)"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID -20 14 L "1=L=100 nH=inductance" "1=Rdc=0.01=DC series resistance" "1=Cap=60 fF=parallel capacitance" "1=Rcap=25=series resistance of capacitance" "1=k=2.34e-4=factor for series resistance (skin effect)">
+    <Line -30 0 12 0 #000080 2 1>
+    <Line 18 0 12 0 #000080 2 1>
+    <EArc -18 -6 12 12 0 2880 #000080 2 1>
+    <EArc -6 -6 12 12 0 2880 #000080 2 1>
+    <EArc 6 -6 12 12 0 2880 #000080 2 1>
+    <Line -17 -11 8 0 #000080 2 1>
+    <Line -4 -11 8 0 #000080 2 1>
+    <Line 9 -11 8 0 #000080 2 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 30 0 2 180>
+  </Symbol>
+</Component>
+
+<Component tappedcoil>
+  <Description>
+    inductance with tap
+  </Description>
+  <Model>
+    .Def:LS_diverse_tappedcoil _net0 _net1 _net2 L="1µH" n1="2" n2="2"
+      MUT:TM _net0 _net2 _net1 _net2 "L*(n1/(n1+n2))^2" "L*(n2/(n1+n2))^2" "1" "0" "0"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line 0 -24 0 -6 #000080 2 1>
+    <Line -10 0 12 0 #000080 2 1>
+    <Line 0 30 0 -6 #000080 2 1>
+    <EArc -6 0 12 12 4320 2880 #000080 2 1>
+    <EArc -6 -12 12 12 4320 2880 #000080 2 1>
+    <EArc -6 -24 12 12 4320 2880 #000080 2 1>
+    <EArc -6 12 12 12 4320 2880 #000080 2 1>
+    <Text -11 -29 10 #000000 0 "1">
+    <Text -12 14 10 #000000 0 "2">
+    <.PortSym 0 30 2 90>
+    <.PortSym 0 -30 1 270>
+    <.PortSym -10 0 3 0>
+    <.ID 20 -26 L "1=L=1µH=total inductance" "1=n1=2=number of turns (high end)" "1=n2=2=number of turns (low end)">
+  </Symbol>
+</Component>
+
+<Component potentiometer>
+  <Description>
+    variable resistance
+  </Description>
+  <Model>
+    .Def:LS_diverse_potentiometer _net0 _net2 _net1 R="1k" k="0.5"
+      R:R1 _net0 _net2 "R*k" "26.85" "0" "0" "26.85"
+      R:R2 _net2 _net1 "R*(1-k)" "26.85" "0" "0" "26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -30 0 12 0 #000080 2 1>
+    <Line 18 0 12 0 #000080 2 1>
+    <Line -18 -9 36 0 #000080 2 1>
+    <Line 18 -9 0 18 #000080 2 1>
+    <Line 18 9 -36 0 #000080 2 1>
+    <Line -18 9 0 -18 #000080 2 1>
+    <Arrow 0 30 0 -20 8 4 #000080 2 1 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 0 30 2 90>
+    <.PortSym 30 0 3 180>
+    <.ID -20 -76 R "1=R=1k=total resistance in ohms" "1=k=0.5=position of middle pin (0...1)" "0=Package=RV2=PCB footprint [RV2, RV2X4]">
+  </Symbol>
+</Component>
+
+<Component loudspeaker>
+  <Description>
+    small-signal model of electrodynamic loudspeaker
+    (dispersive frequency-domain model)
+  </Description>
+  <Model>
+    .Def:LS_diverse_loudspeaker _net0 _net1 Re="5" n="0.7" K="0.025" fs="35" Qms="2.8" Res="32"
+      Tr:Tr1 _net0 _net2 gnd _net1 "1"
+      RFEDD:X1 _net2 "Y" "1" "zerofrequency" "1 / (Re + K * S^n + Res*S / (S + Qms*(S*S/2/pi/fs + 2*pi*fs)))"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 10 20 0 #000080 2 1>
+    <Line -10 -10 20 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 4 1>
+    <Line 10 -10 10 -10 #000080 2 1>
+    <Line 10 10 10 10 #000080 2 1>
+    <Line -10 -10 0 20 #000080 2 1>
+    <Line 20 -20 0 40 #000080 2 1>
+    <Line 0 10 0 20 #000080 2 1>
+    <Line 0 -30 0 20 #000080 2 1>
+    <.PortSym 0 -30 1 270>
+    <.PortSym 0 30 2 90>
+    <.ID 30 -26 L "1=Re=5=DC resistance of voice-coil in ohms" "1=n=0.7=frequency exponent of lossy inductance (0...1 with 1 for a lossless inductor)" "1=K=0.025=factor of lossy inductance" "0=fs=35=resonance frequency of driver in Hertz" "0=Qms=2.8=mechanical quality factor" "0=Res=32=resonance resistance in ohms" "0=Package=SIL-2=PCB footprint [SIL-2, BORNIER2]">
+  </Symbol>
+</Component>
+
+<Component crystal>
+  <Description>
+    first order model (small-signal)
+  </Description>
+  <Model>
+    .Def:LS_diverse_crystal _net0 _net2 freq="1 MHz" Rs="540" Q="1000" Cp="13 pF"
+      L:L1 _net0 _net1 L="Q*Rs / (2*pi*freq)" I=""
+      C:Cp _net0 _net2 C="Cp" V=""
+      R:Rs _net3 _net2 R="Rs" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+      C:C1 _net1 _net3 C="1 / (2*pi*freq * Q*Rs)" V=""
+    .Def:End
+  </Model>
+  <Symbol>
+    <.PortSym -30 0 1 0>
+    <Line -30 0 20 0 #000080 2 1>
+    <Line 10 0 20 0 #000080 2 1>
+    <.PortSym 30 0 2 180>
+    <Line 10 -8 0 16 #000080 3 1>
+    <Line -10 -8 0 16 #000080 3 1>
+    <Line 5 10 0 -20 #000080 2 1>
+    <Line -5 10 0 -20 #000080 2 1>
+    <Line -5 -10 10 0 #000080 2 1>
+    <Line -5 10 10 0 #000080 2 1>
+    <.ID -30 20 X "1=freq=1 MHz=(serial) resonance frequency" "0=Rs=540=serial resistance" "0=Q=1000=quality factor" "0=Cp=13 pF=parallel capacitance" "0=Package=HC-18UV=PCB footprint [HC-18UV, HC-18UH, QMONTRE]">
+  </Symbol>
+</Component>
+
+<Component optocoupler>
+  <Description>
+    simplified model
+    contains diode, current source, bipolar transistor, isolation resistance/capacitance
+  </Description>
+  <Model>
+    .Def:LS_diverse_optocoupler _net1 _net3 _net2 _net5
+      Diode:D1 _net0 _net1 "10 pA" "2.2" "1 pF" "0.3" "0.75 V" "0.5" "0" "1.5e-6" "60" "0.01" "5 ns" "7 mA" "0" "1" "1" "15" "10" "26.85" "10" "1.4" "0" "0" "0" "0" "0" "0" "26.85" "1.0" "7.02e-4" "1108"
+      _BJT:T1 _net4 _net3 _net2 Type="npn" Is="20fA" Nf="1" Nr="1" Ikf="0.2" Ikr="0.12" Vaf="8" Var="100" Ise="20fA" Ne="1.5" Isc="20fA" Nc="3" Bf="1000" Br="7" Rbm="0" Rc="1.3" Re="0" Rb="0" Cje="15pF" Vje="0.75" Mje="0.33" Cjc="2pF" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.5ns" Xtf="0" Vtf="0" Itf="1" Tr="1ns" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.36" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R_leak _net5 _net2 "1e12" "26.85" "0" "0" "26.85"
+      C:C_leak _net5 _net2 "2pF" ""
+      CCCS:SRC1 _net0 _net4 _net2 _net5 "-0.01" "0"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID 55 -20 OPTO>
+    <.PortSym -30 -30 1 0>
+    <.PortSym -30 30 4 0>
+    <.PortSym 30 -30 2 180>
+    <.PortSym 30 30 3 180>
+    <Line -30 30 0 -60 #000080 2 1>
+    <Line -21 6 -18 0 #000080 2 1>
+    <Line -21 -6 -18 0 #000080 2 1>
+    <Line 20 15 0 -30 #000080 3 1>
+    <Line 30 30 0 -15 #000080 2 1>
+    <Line 20 -5 10 -10 #000080 2 1>
+    <Line 30 -15 0 -15 #000080 2 1>
+    <Arrow 20 5 10 10 6 3 #000080 2 1 1>
+    <Line -30 6 -9 -12 #000080 2 1>
+    <Line -30 6 9 -12 #000080 2 1>
+    <Line -6 -6 4 -4 #000080 2 1>
+    <Line -12 -12 6 6 #000080 2 1>
+    <Arrow -2 -10 10 10 9 3 #000080 2 1 1>
+    <Arrow -4 0 10 10 9 3 #000080 2 1 1>
+    <Line -8 4 4 -4 #000080 2 1>
+    <Line -14 -2 6 6 #000080 2 1>
+    <Line -50 -20 100 0 #808080 1 1>
+    <Line -50 20 100 0 #808080 1 1>
+    <Line -50 20 0 -40 #808080 1 1>
+    <Line 50 20 0 -40 #808080 1 1>
+  </Symbol>
+</Component>
+
+<Component fuse>
+  <Description>
+    fuse with european symbol
+    (modeled is the resistance only)
+  </Description>
+  <Model>
+    .Def:LS_diverse_fuse _net0 _net1 Ri="0.01"
+      R:R1 _net0 _net1 R="Ri" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID -20 14 F "0=Ri=10 mOhm=internal resistance" "0=Package=FUSE5-20=PCB footprint">
+    <.PortSym -30 0 1 0>
+    <.PortSym 30 0 2 180>
+    <Line -18 9 36 0 #000080 2 1>
+    <Line -18 -9 36 0 #000080 2 1>
+    <Line -18 -9 0 18 #000080 2 1>
+    <Line 18 -9 0 18 #000080 2 1>
+    <Line -30 0 12 0 #000080 2 1>
+    <Line 18 0 12 0 #000080 2 1>
+    <Line -18 0 36 0 #000080 1 1>
+  </Symbol>
+</Component>
+
+<Component fuseUS>
+  <Description>
+    fuse with american symbol
+    (modeled is the resistance only)
+  </Description>
+  <Model>
+    .Def:LS_diverse_fuseUS _net0 _net1 Ri="0.01"
+      R:R1 _net0 _net1 R="Ri" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID -20 14 F "0=Ri=10 mOhm=internal resistance" "0=Package=FUSE5-20=PCB footprint">
+    <.PortSym 30 0 2 180>
+    <.PortSym -30 0 1 0>
+    <Line 22 0 8 0 #000080 2 1>
+    <EArc -15 -10 15 20 0 2794 #000080 2 1>
+    <EArc 0 -10 15 20 2879 2881 #000080 2 1>
+    <Ellipse -22 -4 8 8 #000080 2 1 #c0c0c0 1 0>
+    <Line -30 0 8 0 #000080 2 1>
+    <Ellipse 15 -4 8 8 #000080 2 1 #c0c0c0 1 0>
+  </Symbol>
+</Component>
+
+<Component NTC>
+  <Description>
+    NTC thermistor (negative temperature coefficient)
+    resistor with exponential temperature dependency
+    R = Rn * exp(B/(Temp+273.15) - B/(Tn+273.15))
+  </Description>
+  <Model>
+    .Def:LS_diverse_NTC _net0 _net1 Rn="10k" Tn="25" B="3000" Temp="25"
+      R:R1 _net0 _net1 "Rn * exp(B/(Temp-T0K) - B/(Tn-T0K))" "Temp" "0" "0" "0"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -30 0 12 0 #000080 2 1>
+    <Line 18 0 12 0 #000080 2 1>
+    <Line -18 -9 36 0 #000080 2 1>
+    <Line 18 -9 0 18 #000080 2 1>
+    <Line 18 9 -36 0 #000080 2 1>
+    <Line -18 9 0 -18 #000080 2 1>
+    <Line -20 20 40 -40 #000080 2 1>
+    <Line -30 20 10 0 #000080 2 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 30 0 2 180>
+    <.ID -20 24 NTC "1=Rn=10k=nominal resistance" "1=Tn=25=nominal temperature in °C" "1=B=3000=material constant in K (B value)" "0=Temp=25=device temperature in °C">
+  </Symbol>
+</Component>
+
+<Component TL431>
+  <Description>
+    programmable shunt regulator
+    Vref = 2.5V; max. 36V; 1 ... 100mA
+    Manufacturer: ON Semiconductor
+  </Description>
+  <Model>
+    .Def:LS_diverse_TL431 _net1 _net10 _net4
+      R:R1 _net0 _net1 "800" "26.85" "0" "0" "26.85"
+      R:R2 _net2 _net1 "800" "26.85" "0" "0" "26.85"
+      _BJT:T5 _net3 _net3 _net4 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      R:R5 _net5 _net6 "4k" "26.85" "0" "0" "26.85"
+      R:R4 _net7 _net8 "2.4k" "26.85" "0" "0" "26.85"
+      C:C1 _net9 _net5 "20 pF" ""
+      R:R6 _net9 _net8 "7.2k" "26.85" "0" "0" "26.85"
+      R:R7 _net10 _net11 "800" "26.85" "0" "0" "26.85"
+      _BJT:T4 _net12 _net13 _net6 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T6 _net9 _net5 _net10 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T7 _net7 _net9 _net11 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T8 _net7 _net7 _net10 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T2 _net13 _net3 _net2 Type="pnp" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="20" Br="1" Rbm="0" Rc="0" Re="0" Rb="20" Cje="6 pF" Vje="0.75" Mje="0.33" Cjc="4 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="20 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T3 _net13 _net13 _net0 Type="pnp" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="20" Br="1" Rbm="0" Rc="0" Re="0" Rb="20" Cje="6 pF" Vje="0.75" Mje="0.33" Cjc="4 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="20 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T1 _net4 _net1 _net12 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      R:R8 _net14 _net7 "1k" "26.85" "0" "0" "26.85"
+      _BJT:T9 _net14 _net3 _net10 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      _BJT:T11 _net15 _net1 _net10 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3 pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1.0" EgTA="0.000702" EgTB="1108"
+      R:R10 _net15 _net16 "150" "26.85" "0" "0" "26.85"
+      R:R9 _net10 _net15 "10k" "26.85" "0" "0" "26.85"
+      R:R3 _net8 _net12 "5.38k" "26.85" "0" "0" "26.85"
+      Diode:D2 _net1 _net10 "1e-13 A" "1" "10 fF" "0.5" "0.7 V" "0.5" "0" "0" "2.0" "7" "0" "0" "0" "1" "1" "0" "1 mA" "26.85" "3" "1.11" "0" "0" "0" "0" "0" "0" "26.85" "1" "7.02e-4" "1108"
+      Diode:D3 _net3 _net10 "1e-13 A" "1" "10 fF" "0.5" "0.7 V" "0.5" "0" "0" "2.0" "7" "0" "0" "0" "1" "1" "0" "1 mA" "26.85" "3" "1.11" "0" "0" "0" "0" "0" "0" "26.85" "1" "7.02e-4" "1108"
+      _BJT:T10 _net3 _net1 _net16 Type="npn" Is="1e-16" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="100" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Bf="160" Br="1" Rbm="0" Rc="0" Re="0" Rb="100" Cje="3pF" Vje="0.75" Mje="0.33" Cjc="2 pF" Vjc="0.75" Mjc="0.33" Xcjc="1.0" Cjs="2 pF" Vjs="0.75" Mjs="0" Fc="0.5" Tf="0.3 ns" Xtf="0.0" Vtf="0.0" Itf="0.0" Tr="6 ns" Temp="26.85" Kf="0.0" Af="1.0" Ffe="1.0" Kb="0.0" Ab="1.0" Fb="1.0" Ptf="0.0" Xtb="0.0" Xti="3.0" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      C:C2 _net3 _net1 "20 pF" ""
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line 0 30 0 -24 #000080 2 1>
+    <Line 0 -30 0 24 #000080 2 1>
+    <Line -9 -6 18 0 #000080 2 1>
+    <Line -9 6 18 0 #000080 2 1>
+    <Line -4 0 -16 0 #000080 2 1>
+    <Line 9 6 -9 -12 #000080 2 1>
+    <Line -9 6 9 -12 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym 0 30 2 0>
+    <.PortSym -20 0 3 0>
+    <.ID 15 -16 IC "0=Package=TO92=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component LM555>
+  <Description>
+    universal timer
+    +5V ... +15V, 0.1Hz ... 100kHz
+    Manufacturer: Fairchild Semiconductor
+  </Description>
+  <Model>
+    .Def:LS_diverse_LM555 _net90 _net32 _net30 _net19 _net23 _net33 _net1 _net21
+      R:R1 _net9 _net21 R="4.7k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net3 _net21 R="830" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R3 _net8 _net21 R="4.7k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R4 _net10 _net21 R="1k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R5 _net14 _net90 R="100k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R6 _net22 _net90 R="100k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R7 _net17 _net90 R="10k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R8 _net18 _net23 R="5k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R9 _net18 _net90 R="5k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R10 _net21 _net23 R="5k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R11 _net20 _net31 R="5k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R12 _net25 _net27 R="4.7k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R13 _net21 _net29 R="6.8k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R14 _net16 _net15 R="100" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R15 _net16 _net26 R="220" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R16 _net16 _net90 R="4.7k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R17 _net28 _net30 R="3.9k" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D1 _net24 _net31 Is="1e-014" N="1" Cj0="1pF" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="40" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D2 _net29 _net30 Is="1e-014" N="1" Cj0="1pF" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="40" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q3 _net2 _net2 _net9 Type="pnp" Is="1e-014" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q4 _net2 _net25 _net3 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q5 _net6 _net90 _net3 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q6 _net6 _net6 _net8 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q7 _net33 _net2 _net5 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q8 _net5 _net2 _net17 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q9 _net4 _net6 _net17 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q10 _net23 _net6 _net4 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q11 _net20 _net12 _net10 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q12 _net11 _net22 _net12 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q13 _net13 _net14 _net12 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q14 _net32 _net90 _net11 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q15 _net18 _net14 _net13 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q16 _net15 _net1 _net90 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q17 _net19 _net15 _net31 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q18 _net20 _net27 _net21 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q19 _net20 _net20 _net21 Type="pnp" Is="1e-14" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="50" Var="0" Ise="0" Ne="2" Isc="0" Nc="2" Bf="20" Br="0.02" Rbm="0" Rc="4" Re="0" Rb="25" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="159n" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q20 _net25 _net24 _net90 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q21 _net22 _net25 _net90 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q22 _net24 _net27 _net90 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q23 _net29 _net21 _net28 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q24 _net27 _net29 _net16 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q25 _net26 _net30 _net90 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _BJT:Q26 _net28 _net21 _net30 Type="npn" Is="5.07f" Nf="1" Nr="1" Ikf="30mA" Ikr="45mA" Vaf="161" Var="16" Ise="3.9p" Ne="2" Isc="0" Nc="2" Bf="100" Br="4" Rbm="0" Rc="0.412" Re="1.03" Rb="4.12" Cje="12.4p" Vje="1.1" Mje="0.5" Cjc="4.02p" Vjc="0.3" Mjc="0.3" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="229p" Xtf="0" Vtf="0" Itf="0" Tr="959p" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.5" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -40 80 80 0 #000080 2 1>
+    <Line -40 -80 0 160 #000080 2 1>
+    <Line -40 -80 80 0 #000080 2 1>
+    <Line -50 -60 10 0 #000080 2 1>
+    <Line -50 -20 10 0 #000080 2 1>
+    <Line -50 20 10 0 #000080 2 1>
+    <Line -50 60 10 0 #000080 2 1>
+    <Line -20 80 0 10 #000080 2 1>
+    <Line 20 -80 0 -10 #000080 2 1>
+    <Line 20 80 0 10 #000080 2 1>
+    <Line 40 -80 0 160 #000080 2 1>
+    <Line 40 0 10 0 #000080 2 1>
+    <Text -35 -30 10 #000000 0 "Dis">
+    <Text -35 50 10 #000000 0 "Trig">
+    <Text -35 10 10 #000000 0 "Thres">
+    <Text -35 -70 10 #000000 0 "Reset">
+    <Text 15 -10 10 #000000 0 "Out">
+    <Text 10 -75 10 #000000 0 "Vcc">
+    <Text 5 60 10 #000000 0 "GND">
+    <Text -45 84 10 #000000 0 "CV">
+    <.PortSym 20 90 1 0>
+    <.PortSym -50 60 2 0>
+    <.PortSym 50 0 3 0>
+    <.PortSym -50 -60 4 0>
+    <.PortSym -20 90 5 0>
+    <.PortSym -50 20 6 0>
+    <.PortSym -50 -20 7 0>
+    <.PortSym 20 -90 8 0>
+    <.ID 50 54 IC "0=Package=8DIP300=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component LM386>
+  <Description>
+    low voltage audio power amplifier
+    +5V ... +12V, 0.5W output power at 8ohms
+    Manufacturer: National Semiconductor
+  </Description>
+  <Model>
+    .Def:LS_diverse_LM386  _net8 _net6 _net3 _net2 _net14 _net12 _net10 _net9
+      _BJT:Q6 _net0 _net1 _net2 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      R:R2 _net3 _net2 "50k" "26.85" "0" "0" "26.85"
+      _BJT:Q12 _net4 _net4 _net5 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "100" "0.000702" "1108"
+      _BJT:Q7 _net1 _net5 _net2 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      C:C1 _net5 _net1 "15pF" ""
+      _BJT:Q5 _net0 _net0 _net2 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      R:R1 _net6 _net2 "50k" "26.85" "0" "0" "26.85"
+      _BJT:Q4 _net7 _net1 _net8 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      _BJT:Q2 _net3 _net2 _net7 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      R:R6 _net9 _net8 "1.35k" "26.85" "0" "0" "26.85"
+      R:R4 _net10 _net11 "15k" "26.85" "0" "0" "26.85"
+      R:R3 _net12 _net10 "15k" "26.85" "0" "0" "26.85"
+      R:R5 _net11 _net9 "150" "26.85" "0" "0" "26.85"
+      _BJT:Q1 _net6 _net2 _net13 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      _BJT:Q3 _net13 _net0 _net11 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      R:R7 _net8 _net14 "15k" "26.85" "0" "0" "26.85"
+      _BJT:Q13 _net15 _net12 _net14 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "100" "0.000702" "1108"
+      _BJT:Q8 _net16 _net15 _net12 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      _BJT:Q11 _net15 _net15 _net4 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "100" "0.000702" "1108"
+      _BJT:Q9 _net16 _net16 _net12 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+      Idc:I1 _net12 _net16 "5e-3"
+      _BJT:Q14 _net17 _net14 _net2 "npn" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "400" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "100" "0.000702" "1108"
+      _BJT:Q10 _net5 _net17 _net14 "pnp" "10f" "1" "1" "0" "0" "100" "100" "0" "1.5" "0" "2" "200" "1" "0" "0" "0" "0" "5p" "0.75" "0.3333" "2p" "0.75" "0.3333" "1" "0" "0.75" "0" "0.5" "1n" "0" "10" "1" "10n" "26.85" "0" "1" "1" "0" "1" "1" "0" "1.5" "3" "1.11" "26.85" "1" "0.000702" "1108"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -40 -70 80 0 #000080 2 1>
+    <Line -40 70 80 0 #000080 2 1>
+    <Line -40 -70 0 140 #000080 2 1>
+    <Line -50 -20 20 0 #000080 2 1>
+    <Line -50 20 20 0 #000080 2 1>
+    <Line -50 -60 10 0 #000080 2 1>
+    <Line -50 60 10 0 #000080 2 1>
+    <Line 40 -70 0 140 #000080 2 1>
+    <Line 40 -20 10 0 #000080 2 1>
+    <Line 40 20 10 0 #000080 2 1>
+    <Line 40 -60 10 0 #000080 2 1>
+    <Line 20 60 30 0 #000080 2 1>
+    <Line -20 25 0 -50 #000080 2 1>
+    <Line -30 -10 10 0 #000080 2 1>
+    <Line -30 -10 0 -10 #000080 2 1>
+    <Line -30 10 10 0 #000080 2 1>
+    <Line -30 20 0 -10 #000080 2 1>
+    <Line -20 -25 35 25 #000080 2 1>
+    <Line 15 0 5 0 #000080 2 1>
+    <Line 15 0 -35 25 #000080 2 1>
+    <Line 20 60 0 -60 #000080 2 1>
+    <EArc -10 -79 20 20 2880 2880 #000080 2 1>
+    <Text -36 -67 10 #000000 0 "gain">
+    <Text 12 -67 10 #000000 0 "gain">
+    <Text 23 31 10 #000000 90 "Vcc">
+    <Text 21 -29 10 #000000 0 "bp">
+    <Text -35 49 10 #000000 0 "gnd">
+    <Line -16 -10 8 0 #000000 1 1>
+    <Line -12 14 0 -8 #ff0000 1 1>
+    <Line -16 10 8 0 #ff0000 1 1>
+    <.PortSym -50 -60 1 0>
+    <.PortSym -50 -20 2 0>
+    <.PortSym -50 20 3 0>
+    <.PortSym -50 60 4 0>
+    <.PortSym 50 60 5 180>
+    <.PortSym 50 20 6 180>
+    <.PortSym 50 -20 7 180>
+    <.PortSym 50 -60 8 180>
+    <.ID -30 74 IC "0=Package=8DIP300=footprint for PBC">
+  </Symbol>
+</Component>

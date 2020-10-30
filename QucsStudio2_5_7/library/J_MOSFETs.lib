@@ -1,0 +1,307 @@
+<QucsStudio Library 1.0.0 "MOSFETs">
+
+<DefaultSymbol>
+  <.ID 10 -16 T "0=Package=TO220=PCB footprint">
+  <Line -14 -13 0 26 #000080 3 1>
+  <Line -30 0 16 0 #000080 2 1>
+  <Line -10 -11 10 0 #000080 2 1>
+  <Line 0 -11 0 -19 #000080 2 1>
+  <Line -10 11 10 0 #000080 2 1>
+  <Line 0 0 0 30 #000080 2 1>
+  <Line -10 0 10 0 #000080 2 1>
+  <Line -9 0 5 -5 #000080 2 1>
+  <Line -9 0 5 5 #000080 2 1>
+  <Line -10 -16 0 9 #000080 3 1>
+  <Line -10 -5 0 10 #000080 3 1>
+  <Line -10 7 0 9 #000080 3 1>
+  <.PortSym -30 0 2 0>
+  <.PortSym 0 -30 1 270>
+  <.PortSym 0 30 3 90>
+</DefaultSymbol>
+
+<Component BS170>
+  <Description>
+    n-channel MOSFET
+    60V, 270mA, 5.0 Ohm, package TO92
+    Manufacturer: Zetex
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_BS170 _net3 _net4 _net5
+      _MOSFET:M1 _net2 _net3 _net5 Type="nfet" Vt0="1.824" Kp="0.1233" Gamma="0" Phi="0.6" Lambda="0" Rd="1.436" Rs="1.572" Rg="0" Is="1e-015" N="1" W="0.0001" L="0.0001" Ld="0" Tox="1e-007" Cgso="0" Cgdo="0" Cgbo="0" Cbd="3.5e-11" Cbs="0" Pb="1" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      R:RG _net4 _net2 R="270" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RL _net3 _net5 R="1.2e8" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      C:C1 _net2 _net5 C="2.8e-11" V=""
+      C:C2 _net3 _net2 C="3e-12" V=""
+      Diode:D1 _net3 _net5 Is="5e-012" N="1" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0.768" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>
+
+<Component BS870>
+  <Description>
+    enhancement n-channel MOSFET
+    60V, 250mA, 3.5 Ohm @ Vgs=10V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BS870_ 1 0 0 8 -26 0 0 "nfet" 0 "2" 0 "32e-3" 0 "2.48" 0 "0.75" 0 "86.8u" 0 "0.49" 0 "0.49" 0 "0" 0 "125f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-007" 0 "24n" 0 "20n" 0 "176n" 0 "29.8p" 0 "35.8p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component BSS123>
+  <Description>
+    enhancement n-channel MOSFET
+    100V, 170mA, 1.0 Ohm (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BSS123_ 1 0 0 8 -26 0 0 "nfet" 0 "1" 0 "6.37e-3" 0 "1.24" 0 "0.75" 0 "625u" 0 "0.14" 0 "0.14" 0 "0" 0 "85 fA" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-07" 0 "36n" 0 "30n" 0 "124n" 0 "19.8 pF" 0 "23.7 pF" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "7.02e-4" 0 "1108.0" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component BSS123W>
+  <Description>
+    enhancement n-channel MOSFET
+    100V, 170mA, 1.0 Ohm (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BSS123W_ 1 0 0 8 -26 0 0 "nfet" 0 "1.4" 0 "0.805" 0 "1.74" 0 "0.75" 0 "41.8u" 0 "0.14" 0 "0.14" 0 "0" 0 "85f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-07" 0 "24n" 0 "20n" 0 "246n" 0 "39.5p" 0 "47.4p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "7.02e-4" 0 "1108.0" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component BSS138>
+  <Description>
+    enhancement n-channel MOSFET
+    50V, 200mA, 1.4 Ohm @ Vgs=10V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BSS138_ 1 0 0 8 -26 0 0 "nfet" 0 "1.2" 0 "7.5e-3" 0 "1.49" 0 "0.75" 0 "1.25e-3" 0 "0.196" 0 "0.196" 0 "0" 0 "100f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-007" 0 "28.8n" 0 "24n" 0 "247n" 0 "18.4p" 0 "22p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component BSS84>
+  <Description>
+    enhancement p-channel MOSFET
+    50V, 130mA, 6.0 Ohm (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BSS84_ 1 0 0 8 -26 0 0 "pfet" 0 "-1.6" 0 "4.87e-3" 0 "1.98" 0 "0.75" 0 "1.25e-3" 0 "0.84" 0 "0.84" 0 "0" 0 "65f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-07" 0 "50.7n" 0 "42.2n" 0 "69.5n" 0 "46.6p" 0 "55.9p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "7.02e-4" 0 "1108.0" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component BSS84W>
+  <Description>
+    enhancement p-channel MOSFET
+    50V, 130mA, 6.0 Ohm (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET BSS84W_ 1 0 0 8 -26 0 0 "pfet" 0 "-1.6" 0 "25e-3" 0 "1.98" 0 "0.75" 0 "108u" 0 "0.84" 0 "0.84" 0 "0" 0 "65f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-7" 0 "144n" 0 "120n" 0 "341n" 0 "64.2p" 0 "77.1p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "7.02e-4" 0 "1108.0" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component 2N7002>
+  <Description>
+    enhancement n-channel MOSFET
+    60V, 210mA, 7.5 Ohm @ Vgs=5V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET 2N7002_ 1 0 0 8 -26 0 0 "nfet" 0 "2.5" 0 "32e-3" 0 "3.1" 0 "0.75" 0 "39.9u" 0 "1.05" 0 "1.05" 0 "0" 0 "57.5f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-7" 0 "60n" 0 "50n" 0 "390n" 0 "98.8p" 0 "119p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component 2N7002E>
+  <Description>
+    enhancement n-channel MOSFET
+    60V, 300mA, 3 Ohm @ Vgs=10V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET 2N7002E_ 1 0 0 8 -26 0 0 "nfet" 0 "2.5" 0 "781u" 0 "3.1" 0 "0.75" 0 "83.2u" 0 "0.56" 0 "0.56" 0 "0" 0 "120f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-7" 0 "24n" 0 "20n" 0 "176n" 0 "44.5p" 0 "53.4p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component 2N7002T>
+  <Description>
+    enhancement n-channel MOSFET
+    60V, 115mA, 7.5 Ohm @ Vgs=5V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET 2N7002T_ 1 0 0 8 -26 0 0 "nfet" 0 "1.5" 0 "32e-3" 0 "1.86" 0 "0.75" 0 "40u" 0 "0.28" 0 "0.28" 0 "0" 0 "57.5f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-7" 0 "24n" 0 "20n" 0 "176n" 0 "44.5p" 0 "53.4p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component DMN100>
+  <Description>
+    enhancement n-channel MOSFET
+    30V, 1.1A, 0.17 Ohm @ Vgs=4.5V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET DMN100_ 1 0 0 8 -26 0 0 "nfet" 0 "2" 0 "11.5" 0 "2.48" 0 "0.75" 0 "306u" 0 "21e-3" 0 "21e-3" 0 "0" 0 "550f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-007" 0 "360n" 0 "300n" 0 "840n" 0 "199p" 0 "238p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component MMBF170>
+  <Description>
+    enhancement n-channel MOSFET
+    60V, 500mA, 5.3 Ohm @ Vgs=4.5V (L=100um, W=100um)
+    Manufacturer: Diodes Inc.
+  </Description>
+  <Model>
+    <_MOSFET MMBF170_ 1 0 0 8 -26 0 0 "nfet" 0 "2.1" 0 "18.8e-3" 0 "2.6" 0 "0.75" 0 "1.04e-3" 0 "0.294" 0 "0.294" 0 "0" 0 "250f" 0 "1" 0 "0.0001" 0 "0.0001" 0 "0" 0 "1e-007" 0 "24n" 0 "20n" 0 "176n" 0 "29.8p" 0 "35.8p" 0 "0.8" 0 "0.46" 0 "0.5" 0 "0" 0 "0.33" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "0" 0 "1" 0 "1" 0 "26.85" 0 "26.85" 0 "1.11" 0 "0.000702" 0 "1108" 0 "SOT23" 0>
+  </Model>
+</Component>
+
+<Component IRLML6346>
+  <Description>
+    n-channel MOSFET
+    30V, 2.7A, 0.08 Ohm @ 2.5V, package SOT23
+    Manufacturer: International Rectifier
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_IRLML6346 _net1 _net2 _net3
+      _MOSFET:M1 _net7 _net9 _net3 Type="nfet" Vt0="1.37071" Kp="94.0855" Gamma="0" Phi="0.6" Lambda="0.0790727" Rd="0" Rs="0.0446503" Rg="0" Is="1e-032" N="1" W="100u" L="100u" Ld="0" Tox="1e-007" Cgso="2.63196e-006" Cgdo="8.30678e-008" Cgbo="0" Cbd="0" Cbs="0" Pb="0.8" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      Diode:D1 _net1 _net3 Is="2.39655e-8" N="1.47145" Cj0="7.17124e-11" M="0.399527" Vj="0.5" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0.0230614" Tt="1e-007" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="30" Ibv="0.00025" Temp="26.85" Xti="1.56891" Eg="1" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RDS _net3 _net1 R="5e7" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD _net9 _net1 R="0.0111828" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RG _net2 _net7 R="5.26259" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D2 _net5 _net4 Is="1e-32" N="50" Cj0="1.14879e-10" M="0.9" Vj="1.52209" Fc="1e-008" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D3 _net5 gnd Is="1e-10" N="0.4" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="3e-006" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RL _net5 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      CCCS:FI2 _net4 _net7 _net9 gnd G="-1" T="0"
+      VCVS:EV16 _net9 _net10 gnd _net7 G="1" T="0"
+      C:CAP _net11 _net10 C="2.74955e-10" V=""
+      CCCS:FI1 _net11 _net7 _net9 _net6 G="-1" T="0"
+      R:RCAP _net6 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D4 _net6 gnd Is="1e-10" N="0.4" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>
+
+<Component IRLML6401>
+  <Description>
+    p-channel MOSFET
+    -12V, -3.4A, 0.085 Ohm @ -2.5V, package SOT23
+    Manufacturer: International Rectifier
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_IRLML6401 _net1 _net2 _net3
+      _MOSFET:M1 _net7 _net9 _net3 Type="pfet" Vt0="-1" Kp="29.6411" Gamma="0" Phi="0.6" Lambda="0.263457" Rd="0" Rs="0.0272644" Rg="0" Is="1e-032" N="1" W="100u" L="100u" Ld="0" Tox="1e-007" Cgso="6.28652e-006" Cgdo="3.1e-007" Cgbo="0" Cbd="0" Cbs="0" Pb="0.8" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+      Diode:D1 _net3 _net1 Is="8.06174e-8" N="1.5" Cj0="1.19641e-10" M="0.898693" Vj="5" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0.0356243" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="12" Ibv="0.00025" Temp="26.85" Xti="1" Eg="1" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RDS _net3 _net1 R="1e6" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD _net9 _net1 R="0.0001" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RG _net2 _net7 R="6" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D2 _net4 _net5 Is="1e-32" N="50" Cj0="2.19221e-10" M="0.9" Vj="8.26497" Fc="1e-008" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D3 gnd _net5 Is="1e-10" N="0.4" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="3e-006" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RL _net5 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      CCCS:FI2 _net4 _net7 _net9 gnd G="-1" T="0"
+      VCVS:EV16 _net9 _net10 gnd _net7 G="1" T="0"
+      C:CAP _net11 _net10 C="1.20397e-9" V=""
+      CCCS:FI1 _net11 _net7 _net9 _net6 G="-1" T="0"
+      R:RCAP _net6 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D4 gnd _net6 Is="1e-10" N="0.4" Cj0="0" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID 10 -16 T "0=Package=SOT23=PCB footprint">
+    <Line -14 -13 0 26 #000080 3 1>
+    <Line -30 0 16 0 #000080 2 1>
+    <Line -10 -11 10 0 #000080 2 1>
+    <Line 0 -11 0 -19 #000080 2 1>
+    <Line -10 11 10 0 #000080 2 1>
+    <Line 0 0 0 30 #000080 2 1>
+    <Line -10 0 10 0 #000080 2 1>
+    <Line -10 -16 0 9 #000080 3 1>
+    <Line -10 7 0 9 #000080 3 1>
+    <Line 0 0 -5 -5 #000080 2 1>
+    <Line 0 0 -5 5 #000080 2 1>
+    <Line -10 -4 0 8 #000080 3 1>
+    <.PortSym -30 0 2 0>
+    <.PortSym 0 -30 1 270>
+    <.PortSym 0 30 3 90>
+  </Symbol>
+</Component>
+
+<Component IRFZ24N>
+  <Description>
+    n-channel power MOSFET
+    60V, 17A, 0.10 Ohm, package TO-220
+    Manufacturer: International Rectifier
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_IRFZ24N _net1 _net2 _net3
+      Diode:D4 _net6 gnd Is="1e-010" N="0.4" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RCAP _net6 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      CCCS:FI1 _net11 _net7 _net9 _net6 G="-1" T="0"
+      C:CAP _net11 _net10 C="6.81971e-010" V=""
+      VCVS:EV16 _net9 _net10 gnd _net7 G="1" T="0"
+      CCCS:FI2 _net4 _net7 _net9 gnd G="-1" T="0"
+      R:RL _net5 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D3 _net5 gnd Is="1e-010" N="0.4" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="3e-006" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D2 _net5 _net4 Is="1e-032" N="50" Cj0="4.37817e-010" M="0.578699" Vj="0.5" Fc="1e-008" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RG _net2 _net7 R="2.4575" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD _net9 _net1 R="0.0001" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RDS _net3 _net1 R="2.2e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D1 _net1 _net3 Is="1.43387e-010" N="1.28803" Cj0="2.96476e-010" M="0.3" Vj="0.50803" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0.0112766" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="55" Ibv="0.00025" Temp="26.85" Xti="2.96465" Eg="1.2" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _MOSFET:M1 _net7 _net9 _net3 Type="nfet" Vt0="3.6319" Kp="8.99346" Gamma="0" Phi="0.6" Lambda="0" Rd="0" Rs="0.0409355" Rg="0" Is="1e-032" N="1" W="100u" L="100u" Ld="0" Tox="1e-007" Cgso="3.09714e-006" Cgdo="1.6185e-007" Cgbo="0" Cbd="0" Cbs="0" Pb="0.8" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>
+
+<Component IRFZ34N>
+  <Description>
+    n-channel power MOSFET
+    60V, 30A, 0.050 Ohm, package TO-220
+    Manufacturer: International Rectifier
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_IRFZ34N _net1 _net2 _net3
+      Diode:D4 _net6 gnd Is="1e-010" N="0.419075" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RCAP _net6 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      CCCS:FI1 _net11 _net7 _net9 _net6 G="-1" T="0"
+      C:CAP _net11 _net10 C="1.15458e-009" V=""
+      VCVS:EV16 _net9 _net10 gnd _net7 G="1" T="0"
+      CCCS:FI2 _net4 _net7 _net9 gnd G="-1" T="0"
+      R:RL _net5 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D3 _net5 gnd Is="1e-010" N="0.419075" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="3e-006" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D2 _net5 _net4 Is="1e-032" N="50" Cj0="8.11706e-010" M="0.598708" Vj="0.50002" Fc="1e-008" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RG _net2 _net7 R="2.19574" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD _net9 _net1 R="0.0001" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RDS _net3 _net1 R="2.2e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D1 _net1 _net3 Is="1.0923e-013" N="0.960237" Cj0="5.91562e-010" M="0.482115" Vj="1.29493" Fc="0.1" Cp="0" Isr="0" Nr="2" Rs="0.00951665" Tt="1e-007" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="55" Ibv="0.00025" Temp="26.85" Xti="1" Eg="1" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _MOSFET:M1 _net7 _net9 _net3 Type="nfet" Vt0="3.65645" Kp="17.7646" Gamma="0" Phi="0.6" Lambda="0" Rd="0" Rs="0.0280664" Rg="0" Is="1e-032" N="1" W="100u" L="100u" Ld="0" Tox="1e-007" Cgso="6.22832e-006" Cgdo="1.97453e-007" Cgbo="0" Cbd="0" Cbs="0" Pb="0.8" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>
+
+<Component IRFZ44N>
+  <Description>
+    n-channel power MOSFET
+    55V, 49A, 0.0175 Ohm, package TO-220
+    Manufacturer: International Rectifier
+  </Description>
+  <Model>
+    .Def:LJ_MOSFETs_IRFZ44N _net1 _net2 _net3
+      Diode:D4 _net6 gnd Is="1e-010" N="0.408752" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RCAP _net6 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      CCCS:FI1 _net11 _net7 _net9 _net6 G="-1" T="0"
+      C:CAP _net11 _net10 C="2.06741e-009" V=""
+      VCVS:EV16 _net9 _net10 gnd _net7 G="1" T="0"
+      CCCS:FI2 _net4 _net7 _net9 gnd G="-1" T="0"
+      R:RL _net5 _net10 R="1" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D3 _net5 gnd Is="1e-010" N="0.408752" Cj0="1e-014" M="0.5" Vj="0.7" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="3e-006" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      Diode:D2 _net5 _net4 Is="1e-032" N="50" Cj0="1.52875e-009" M="0.584414" Vj="0.5" Fc="1e-008" Cp="0" Isr="0" Nr="2" Rs="0" Tt="0" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="0" Ibv="0.001" Temp="26.85" Xti="3" Eg="1.11" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:RG _net2 _net7 R="2.20235" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RD _net9 _net1 R="0.0001" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:RDS _net3 _net1 R="2.2e+006" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      Diode:D1 _net1 _net3 Is="9.64635e-013" N="1.01377" Cj0="1.39353e-009" M="0.42532" Vj="0.5" Fc="0.5" Cp="0" Isr="0" Nr="2" Rs="0.00967689" Tt="1e-007" Ikf="0" Kf="0" Af="1" Ffe="1" Bv="55" Ibv="0.00025" Temp="26.85" Xti="2.9994" Eg="1.08658" Tbv="0" Trs="0" Ttt1="0" Ttt2="0" Tm1="0" Tm2="0" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      _MOSFET:M1 _net7 _net9 _net3 Type="nfet" Vt0="3.56214" Kp="39.3974" Gamma="0" Phi="0.6" Lambda="0" Rd="0" Rs="0.0133305" Rg="0" Is="1e-032" N="1" W="100u" L="100u" Ld="0" Tox="1e-007" Cgso="1.25255e-005" Cgdo="2.2826e-007" Cgbo="0" Cbd="0" Cbs="0" Pb="0.8" Mj="0.5" Fc="0.5" Cjsw="0" Mjsw="0.33" Tt="0" Cj="0" Ad="0" As="0" Pd="0" Ps="0" Kf="0" Af="1" Ffe="1" Temp="26.85" Tnom="26.85" Eg="1.11" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>

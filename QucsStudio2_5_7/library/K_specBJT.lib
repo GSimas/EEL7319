@@ -1,0 +1,615 @@
+<QucsStudio Library 1.5.0 "Special Transistors">
+
+<DefaultSymbol>
+  <.ID 10 -16 T "0=Package=SOT23=PCB footprint">
+  <Line -10 -15 0 30 #000080 3 1>
+  <Line -30 0 20 0 #000080 2 1>
+  <Line -10 -5 10 -10 #000080 2 1>
+  <Line 0 -30 0 15 #000080 2 1>
+  <Line 0 15 0 15 #000080 2 1>
+  <Line -10 5 10 10 #000080 2 1>
+  <Line -6 15 6 0 #000080 2 1>
+  <Line 0 15 0 -6 #000080 2 1>
+  <.PortSym -30 0 1 0>
+  <.PortSym 0 -30 2 0>
+  <.PortSym 0 30 3 0>
+</DefaultSymbol>
+
+<Component atf34143>
+  <Description>
+    low-noise pHEMT, package: SOT-343
+    NF=0.5dB, G=17.5dB, P1dB=20dBm @ 1.9GHz, 4V, 60mA
+    Manufacturer: Avago Technologies
+  </Description>
+  <Model>
+    .Def:LK_specBJT_atf34143 _net16 _net14 _net15 Temp="27"
+      L:LL1 _net14 _net4 "0.8nH" ""
+      C:CC4 _net4 _net1 "1.5e-13" ""
+      L:LL10 _net15 _net1 "0.1nH" ""
+      L:LL7 _net3 _net7 "0.05nH" ""
+      L:LL8 _net2 _net15 "0.05nH" ""
+      R:RR7 _net7 _net2 "0.05" "26.85" "0" "0" "26.85"
+      R:RR2 _net2 _net1 "0.1" "26.85" "0" "0" "26.85"
+      L:LL2 _net5 _net3 "0.1nH" ""
+      R:RR5 _net1 _net5 "0.1" "26.85" "0" "0" "26.85"
+      C:CC3 _net2 _net11 "1.5e-13" ""
+      L:LL9 _net11 _net16 "0.6nH" ""
+      L:LL5 _net9 _net11 "0.1075nH" ""
+      L:LL4 _net4 _net6 "0.1075nH" ""
+      Statz:T1 _net6 _net9 _net3 "nfet" "1" "1" "-0.95" "4" "0.24" "0.09" "0.8" "1 nA" "1 nA" "1" "0" "4e-14" "8e-13" "1.6e-13" "0.2" "0.2" "0.7" "0.5" "0.1" "125" "0.35" "0.125" "1.1" "0.01" "0" "0" "0" "0" "0.2" "3" "1.11" "27" "Temp" "0.65" "3.8e-15" "0" "1"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line 0 -15 0 30 #000080 3 1>
+    <Line -20 0 20 0 #000080 2 1>
+    <Line 0 -10 10 0 #000080 2 1>
+    <Line 10 -10 0 -20 #000080 2 1>
+    <Line 0 10 10 0 #000080 2 1>
+    <Line 10 10 0 20 #000080 2 1>
+    <Line 6 24 8 -4 #000080 2 1>
+    <Line -6 -5 5 5 #000080 2 1>
+    <Line -6 5 5 -5 #000080 2 1>
+    <.PortSym 10 -30 1 270>
+    <.PortSym 10 30 3 90>
+    <.PortSym -20 0 2 0>
+    <.ID 20 -26 T "0=Temp=27=device temperature in °C" "0=Package=SOT223=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component BFG135>
+  <Description>
+    silicon wideband NPN BJT
+    P=0.6W / G=12dB @ 800MHz
+    15V, 150mA, 1.0W, 7GHz
+    model including package parasitics
+    Manufacturer: NXP Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_BFG135 _net2 _net1 _net3
+      _BJT:Q1 _net5 _net6 _net7 Type="npn" Is="6.26489e-15" Nf="1.00616" Nr="1.05535" Ikf="4.47193" Ikr="0.0362503" Vaf="44.85" Var="3" Ise="3.79274e-013" Ne="2.07719" Isc="8.32089e-017" Nc="1.03925" Bf="142.485" Br="9.1435" Rbm="4" Rc="1" Re="1.19858" Rb="4" Cje="6.9368e-012" Vje="0.6" Mje="0.407326" Cjc="2.17679e-012" Vjc="0.278142" Mjc="0.172323" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1.11019e-011" Xtf="54.1522" Vtf="5.75002" Itf="0.998036" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="-200" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      L:LB _net4 _net5 L="1.5n" I=""
+      L:LE _net7 _net8 L="0.5n" I=""
+      L:L1 _net2 _net4 L="0.025n" I=""
+      L:L2 _net1 _net6 L="1.19n" I=""
+      L:L3 _net3 _net8 L="0.6n" I=""
+      C:CCB _net4 _net6 C="16f" V=""
+      C:CBE _net4 _net8 C="182f" V=""
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID 10 -16 BFG135_ "0=Package=SOT223=PCB footprint">
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -30 0 20 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line 0 15 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 15 0 -6 #000080 2 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 0 -30 2 0>
+    <.PortSym 0 30 3 0>
+  </Symbol>
+</Component>
+
+<Component BFP405>
+  <Description>
+    silicon NPN RF BJT
+    F=1.25dB / G=23dB @ 1.8GHz
+    4.5V, 25mA, 75mW, 25GHz
+    model including package parasitics
+    Manufacturer: Infineon
+  </Description>
+  <Model>
+    .Def:LK_specBJT_BFP405 _net1 _net2 _net3
+      L:LBI _net1 _net10 L="0.47nH" I=""
+      L:LCI _net2 _net20 L="0.56nH" I=""
+      L:LEI _net3 _net30 L="0.23nH" I=""
+      C:CCB _net10 _net20 C="6.9fF" V=""
+      C:CCE _net20 _net30 C="134fF" V=""
+      C:CBE _net30 _net10 C="136fF" V=""
+      L:LBO _net10 _net100 L="0.53nH" I=""
+      L:LCO _net20 _net200 L="0.58nH" I=""
+      L:LEO _net30 _net300 L="0.05nH" I=""
+      _BJT:Q1 _net100 _net200 _net300 Type="npn" Is="2.1024e-16" Nf="1.0405" Nr="0.96647" Ikf="0.16493" Ikr="0.25052" Vaf="39.251" Var="34.368" Ise="1.5761e-014" Ne="1.7763" Isc="3.7223e-017" Nc="1.3152" Bf="83.23" Br="10.526" Rbm="1.3491" Rc="0.12691" Re="1.9289" Rb="15" Cje="3.7265e-015" Vje="0.70367" Mje="0.37747" Cjc="9.6941e-014" Vjc="0.99532" Mjc="0.48652" Xcjc="0.08161" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.99469" Tf="4.5899e-012" Xtf="0.3641" Vtf="0.19762" Itf="0.0013364" Tr="1.4935e-009" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+  <Symbol>
+    <.ID 10 -16 BFP405_ "0=Package=SOT343=PCB footprint">
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -30 0 20 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line 0 15 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 15 0 -6 #000080 2 1>
+    <.PortSym -30 0 1 0>
+    <.PortSym 0 -30 2 0>
+    <.PortSym 0 30 3 0>
+  </Symbol>
+</Component>
+
+<Component BFR92A>
+  <Description>
+    silicon wideband NPN BJT
+    F=2.1dB / G=14dB @ 1GHz
+    20V, 25mA, 300mW, 5GHz
+    model including package parasitics
+    Manufacturer: NXP Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_BFR92A _net2 _net1 _net3
+      _BJT:Q1 _net5 _net6 _net7 Type="npn" Is="4.11877e-16" Nf="0.997275" Nr="0.996202" Ikf="3.20054" Ikr="1.28155" Vaf="62.6719" Var="3.36915" Ise="4.01062e-015" Ne="1.57708" Isc="2.79905e-016" Nc="1.07543" Bf="102.639" Br="18.1086" Rbm="10" Rc="2.32" Re="1.1645" Rb="10" Cje="8.90512e-013" Vje="0.6" Mje="0.25857" Cjc="5.46563e-013" Vjc="0.380824" Mjc="0.202935" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1.54973e-011" Xtf="39.1402" Vtf="2.15279" Itf="0.213776" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      L:LB _net4 _net5 L="0.4n" I=""
+      L:LE _net7 _net8 L="0.83n" I=""
+      L:L1 _net2 _net4 L="0.35n" I=""
+      L:L2 _net1 _net6 L="0.17n" I=""
+      L:L3 _net3 _net8 L="0.35n" I=""
+      C:CCB _net4 _net6 C="71f" V=""
+      C:CBE _net4 _net8 C="2f" V=""
+      C:CCE _net6 _net8 C="71f" V=""
+    .Def:End
+  </Model>
+</Component>
+
+<Component BFR183W>
+  <Description>
+    silicon wideband NPN BJT
+    F=0.9dB / G=18.5dB @ 900MHz
+    12V, 65mA, 450mW, 8GHz
+    model including Package parasitics
+    Manufacturer: Infineon
+  </Description>
+  <Model>
+    .Def:LK_specBJT_BFR183W _net1 _net2 _net3
+      L:LBI _net1 _net10 L="0.57nH" I=""
+      L:LCI _net2 _net20 L="0nH" I=""
+      L:LEI _net3 _net30 L="0.43nH" I=""
+      C:CCB _net10 _net20 C="101fF" V=""
+      C:CCE _net20 _net30 C="175fF" V=""
+      C:CBE _net30 _net10 C="61fF" V=""
+      L:LBO _net10 _net100 L="0.4nH" I=""
+      L:LCO _net20 _net200 L="0.41nH" I=""
+      L:LEO _net30 _net300 L="0.5nH" I=""
+      _BJT:Q1 _net100 _net200 _net300 Type="npn" Is="1.0345e-15" Nf="0.80799" Nr="0.99543" Ikf="0.14562" Ikr="0.013483" Vaf="14.772" Var="3.4276" Ise="1.6818e-014" Ne="1.2149" Isc="1.3559e-015" Nc="0.85331" Bf="115.98" Br="10.016" Rbm="1.0112" Rc="0.20486" Re="1.3435" Rb="2.5426" Cje="2.3077e-014" Vje="1.0792" Mje="0.45354" Cjc="4.6011e-013" Vjc="1.1967" Mjc="0.3" Xcjc="0.053823" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.54852" Tf="2.2746e-011" Xtf="0.36823" Vtf="0.50905" Itf="0.0018773" Tr="1.0553e-009" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+    .Def:End
+  </Model>
+</Component>
+
+<Component BFS17A>
+  <Description>
+    silicon wideband NPN BJT
+    F=2.5dB / G=13.5dB @ 800MHz
+    15V, 25mA, 300mW, 3GHz
+    model including package parasitics
+    Manufacturer: NXP Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_BFS17A _net2 _net1 _net3
+      BJT:Q1 _net5 _net6 _net7 _net7 Type="npn" Is="2.429e-16" Nf="0.9912" Nr="0.988" Ikf="0.2681" Ikr="10" Vaf="39.71" Var="7.422" Ise="2.408e-015" Ne="1.463" Isc="4.039e-015" Nc="1.376" Bf="93.26" Br="4.816" Rbm="12.27" Rc="1.105" Re="0.3698" Rb="20.94" Cje="1.302e-012" Vje="0.6" Mje="0.2995" Cjc="8.263e-013" Vjc="0.5035" Mjc="0.2814" Xcjc="0.0983" Cjs="1.5e-013" Vjs="0.75" Mjs="0" Fc="0.8067" Tf="3.117e-011" Xtf="296.7" Vtf="6" Itf="0.8048" Tr="1e-009" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0" Xti="3" Eg="1.11" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      L:LB _net4 _net5 L="0.4n" I=""
+      L:LE _net7 _net8 L="0.83n" I=""
+      L:L1 _net2 _net4 L="0.35n" I=""
+      L:L2 _net1 _net6 L="0.17n" I=""
+      L:L3 _net3 _net8 L="0.35n" I=""
+      C:CCB _net4 _net6 C="71f" V=""
+      C:CBE _net4 _net8 C="2f" V=""
+      C:CCE _net6 _net8 C="71f" V=""
+    .Def:End
+  </Model>
+</Component>
+
+<Component MMUN2211>
+  <Description>
+    silicon digital NPN BJT
+    integrated bias resistors (Rb=10k, Rbc=10k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2211 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="npn" Is="1.30131e-13" Nf="1.02751" Nr="1.19435" Ikf="0.175355" Ikr="0.115701" Vaf="15.5775" Var="99.176" Ise="7.68466e-013" Ne="2.02118" Isc="1.00096e-013" Nc="1.994" Bf="207.378" Br="0.249468" Rbm="10" Rc="1.75981" Re="0.0336736" Rb="10.083" Cje="1e-013" Vje="0.743641" Mje="0.336915" Cjc="3.33684e-012" Vjc="101.031" Mjc="0.9" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.516585" Xti="2.99903" Eg="1.07226" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 9 0 31 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2211_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2212>
+  <Description>
+    silicon digital NPN BJT
+    integrated bias resistors (Rb=22k, Rbc=22k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2212 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="npn" Is="8.38182e-14" Nf="1.23872" Nr="1.3733" Ikf="0.0862729" Ikr="0.0975384" Vaf="23.6405" Var="102.425" Ise="1e-016" Ne="1.79966" Isc="9.81319e-014" Nc="1.97115" Bf="391.043" Br="0.778367" Rbm="9.98732" Rc="2.00128" Re="0.000100007" Rb="9.98732" Cje="1.04819e-013" Vje="0.745448" Mje="0.33498" Cjc="3.28042e-012" Vjc="1.83603" Mjc="0.295425" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.432465" Xti="2.99938" Eg="1.0861" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="22000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="22000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 9 0 31 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2212_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2214>
+  <Description>
+    silicon digital NPN BJT
+    integrated bias resistors (Rb=10k, Rbc=47k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2214 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="npn" Is="5.4752e-13" Nf="1.27625" Nr="1.41353" Ikf="0.166492" Ikr="4.72811" Vaf="73.3962" Var="353.997" Ise="1e-016" Ne="4" Isc="1.00036e-016" Nc="4" Bf="274.662" Br="0.849547" Rbm="10" Rc="1.2557" Re="0.000100042" Rb="11.4602" Cje="6.30754e-012" Vje="0.748168" Mje="0.332003" Cjc="4.07415e-012" Vjc="0.267693" Mjc="0.139968" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.10002" Xti="3.33565" Eg="1.05" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="47000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 9 0 31 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2214_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2215>
+  <Description>
+    silicon digital NPN BJT
+    integrated bias resistors (Rb=10k, Rbc=infinity)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2215 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="npn" Is="1.11089e-14" Nf="0.980954" Nr="1.0038" Ikf="0.0454909" Ikr="0.156455" Vaf="13.7591" Var="99.7542" Ise="1e-016" Ne="1.17033" Isc="9.81183e-014" Nc="2.87399" Bf="320.82" Br="4.34852" Rbm="0.1" Rc="0.001" Re="1.81526" Rb="0.1" Cje="7.02461e-012" Vje="0.74856" Mje="0.331575" Cjc="4.71202e-012" Vjc="0.95" Mjc="0.401177" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.73971" Xti="1" Eg="1.206" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 9 0 31 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2215_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2233>
+  <Description>
+    silicon digital NPN BJT
+    integrated bias resistors (Rb=4.7k, Rbc=47k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2233 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="npn" Is="1.11089e-14" Nf="0.980954" Nr="1.0038" Ikf="0.0454909" Ikr="0.156455" Vaf="13.7591" Var="99.7542" Ise="1e-016" Ne="1.17033" Isc="9.81183e-014" Nc="2.87399" Bf="320.82" Br="4.34852" Rbm="0.1" Rc="0.001" Re="1.81526" Rb="0.1" Cje="7.02461e-012" Vje="0.74856" Mje="0.331575" Cjc="4.71202e-012" Vjc="0.95" Mjc="0.401177" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="1.73971" Xti="1" Eg="1.206" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="4700" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="47000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -6 15 6 0 #000080 2 1>
+    <Line 0 9 0 31 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2233_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2111>
+  <Description>
+    silicon digital PNP BJT
+    integrated bias resistors (Rb=10k, Rbc=10k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2111 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="pnp" Is="1.24115e-14" Nf="1.06513" Nr="1.09189" Ikf="0.0638166" Ikr="0.070362" Vaf="70.9109" Var="176.744" Ise="2.66819e-015" Ne="1.90388" Isc="9.08811e-014" Nc="2.62109" Bf="217.078" Br="2.28907" Rbm="9.97095" Rc="1.58164" Re="0.0572462" Rb="9.97095" Cje="2.55801e-012" Vje="0.746499" Mje="0.333828" Cjc="3.07272e-012" Vjc="1.04014" Mjc="0.170789" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.10139" Xti="3.05315" Eg="1.206" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <Line 0 15 0 25 #000080 2 1>
+    <Line -5 16 0 -6 #000080 2 1>
+    <Line -5 10 6 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2111_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2112>
+  <Description>
+    silicon digital PNP BJT
+    integrated bias resistors (Rb=22k, Rbc=22k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2112 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="pnp" Is="1.48296e-13" Nf="0.801599" Nr="0.843953" Ikf="0.0231067" Ikr="0.0963899" Vaf="16.4474" Var="100.032" Ise="2.21742e-012" Ne="1.19976" Isc="9.99994e-014" Nc="2.00001" Bf="297.61" Br="1.06634" Rbm="0.992467" Rc="2.51025" Re="0.243946" Rb="9.92467" Cje="2.55845e-013" Vje="0.746252" Mje="0.334094" Cjc="3.2577e-012" Vjc="1.11327" Mjc="0.193646" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.484956" Xti="2.9904" Eg="1.05" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="22000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="22000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <Line 0 15 0 25 #000080 2 1>
+    <Line -5 16 0 -6 #000080 2 1>
+    <Line -5 10 6 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2112_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2114>
+  <Description>
+    silicon digital PNP BJT
+    integrated bias resistors (Rb=10k, Rbc=47k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2114 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="pnp" Is="1.35212e-12" Nf="1.29185" Nr="1.35146" Ikf="0.0566391" Ikr="0.311164" Vaf="13.1569" Var="93.9316" Ise="1e-016" Ne="1.52381" Isc="1e-016" Nc="1.42961" Bf="127.636" Br="1.83217" Rbm="10" Rc="1.98946" Re="0.000114388" Rb="49.4463" Cje="4.15456e-012" Vje="0.747361" Mje="0.332883" Cjc="4.43596e-012" Vjc="0.0935338" Mjc="0.132163" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.499149" Xti="3.02497" Eg="1.05032" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="47000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <Line 0 15 0 25 #000080 2 1>
+    <Line -5 16 0 -6 #000080 2 1>
+    <Line -5 10 6 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2114_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2115>
+  <Description>
+    silicon digital PNP BJT
+    integrated bias resistors (Rb=10k, Rbc=infinity)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2115 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="pnp" Is="2.15531e-13" Nf="1.14286" Nr="1.32882" Ikf="0.119572" Ikr="0.000300419" Vaf="110.379" Var="96.2336" Ise="5.51785e-015" Ne="4" Isc="6.26992e-015" Nc="1.99009" Bf="303.07" Br="0.256354" Rbm="0.979013" Rc="0.001" Re="3.98528" Rb="9.88918" Cje="1.0394e-011" Vje="0.750033" Mje="0.329968" Cjc="9.54334e-012" Vjc="0.0210543" Mjc="0.203894" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.100541" Xti="3.27715" Eg="1.206" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="10000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="1e+012" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <Line 0 15 0 25 #000080 2 1>
+    <Line -5 16 0 -6 #000080 2 1>
+    <Line -5 10 6 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2115_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
+
+<Component MMUN2133>
+  <Description>
+    silicon digital PNP BJT
+    integrated bias resistors (Rb=4.7k, Rbc=47k)
+    50V, 100mA, 200mW, Vce_sat=0.25V
+    Manufacturer: ON Semiconductors
+  </Description>
+  <Model>
+    .Def:LK_specBJT_MMUN2133 _net1 _net2 _net3
+      _BJT:QOUT _net4 _net1 _net3 Type="pnp" Is="1.61935e-11" Nf="1.20398" Nr="1.21945" Ikf="0.10367" Ikr="0.0158726" Vaf="10" Var="8.16087" Ise="2.738e-012" Ne="1.60458" Isc="1e-016" Nc="1" Bf="153.84" Br="5.71556" Rbm="0.1" Rc="0.001" Re="1.09315" Rb="0.1" Cje="1.00001e-011" Vje="0.75" Mje="0.33" Cjc="1.15448e-011" Vjc="0.441149" Mjc="0.526539" Xcjc="0.9" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Tf="1e-009" Xtf="1" Vtf="10" Itf="0.01" Tr="0" Temp="26.85" Kf="0" Af="1" Ffe="1" Kb="0" Ab="1" Fb="1" Ptf="0" Xtb="0.1" Xti="1" Eg="1.05" Tnom="26.85" Area="1" EgTA="0.000702" EgTB="1108"
+      R:R1 _net2 _net4 R="4700" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+      R:R2 _net4 _net3 R="47000" Temp="26.85" Tc1="0" Tc2="0" Tnom="26.85"
+    .Def:End
+  </Model>
+  <Symbol>
+    <Line -10 -15 0 30 #000080 3 1>
+    <Line -38 0 28 0 #000080 2 1>
+    <Line -10 -5 10 -10 #000080 2 1>
+    <Line 0 -30 0 15 #000080 2 1>
+    <Line -10 5 10 10 #000080 2 1>
+    <Line -22 9 0 19 #000080 2 1>
+    <Line -32 9 0 19 #000080 2 1>
+    <Line -32 9 10 0 #000080 2 1>
+    <Line -32 28 10 0 #000080 2 1>
+    <Line -27 8 0 -8 #000080 2 1>
+    <Line -27 35 0 -8 #000080 2 1>
+    <Line -70 0 13 0 #000080 2 1>
+    <Line -38 -5 0 10 #000080 2 1>
+    <Line -38 5 -19 0 #000080 2 1>
+    <Line -38 -5 -19 0 #000080 2 1>
+    <Line -57 -5 0 10 #000080 2 1>
+    <Line -27 35 27 0 #000080 2 1>
+    <Line 0 15 0 25 #000080 2 1>
+    <Line -5 16 0 -6 #000080 2 1>
+    <Line -5 10 6 0 #000080 2 1>
+    <.PortSym 0 -30 1 0>
+    <.PortSym -70 0 2 0>
+    <.PortSym 0 40 3 0>
+    <.ID 10 -16 MMUN2133_ "0=Package=SOT23=PCB footprint">
+  </Symbol>
+</Component>
