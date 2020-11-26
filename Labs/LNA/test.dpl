@@ -1,0 +1,32 @@
+<QucsStudio Schematic 3.3.2>
+<Properties>
+View=0,0,1087,973,1,0,0
+Grid=10,10,0
+DataSet=*.dat
+DataDisplay=*.sch
+OpenDisplay=1
+showFrame=0
+FrameText0=Title
+FrameText1=Drawn By:
+FrameText2=Date:
+FrameText3=Revision:
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+<Rect 350 420 670 360 31 #c0c0c0 1 10 0 0.001 1 1 1 -0.0987182 0.2 1.08614 1 0 0 0 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"yvalue(Ic.Ib,10e6)/V1" "" #ff0000 0 3 0 0 0 0 "">
+</Rect>
+<Rect 350 850 670 360 31 #c0c0c0 1 10 0 0.001 1 1 1 -0.1 0.2 1.1 1 0 0 0 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"yvalue(Ic.Ib,10e6)/yvalue(Idc.Ib,0)" "" #ff0000 0 3 0 0 0 0 "">
+	<"Idc.Ib" "" #ff0000 0 3 0 0 0 0 "">
+</Rect>
+</Diagrams>
+<Paintings>
+</Paintings>

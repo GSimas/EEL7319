@@ -1,0 +1,42 @@
+<QucsStudio Schematic 3.3.2>
+<Properties>
+View=-180,-144,1530,1706,0.846155,0,670
+Grid=10,10,0
+DataSet=*.dat
+DataDisplay=*.sch
+OpenDisplay=1
+showFrame=0
+FrameText0=Title
+FrameText1=Drawn By:
+FrameText2=Date:
+FrameText3=Revision:
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+<Rect 50 210 780 330 31 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 1 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"vload.Vb" "" #0000ff 0 3 0 6 0 0 "">
+	<"iload.Ib" "" #ff0000 0 3 0 6 0 0 "">
+	<"vin.Vb" "" #ff00ff 0 3 0 6 0 0 "">
+</Rect>
+<Rect 30 870 840 470 31 #c0c0c0 1 10 1 1e-11 1 1e-08 1 -1.06812 2 12.9817 1 0 0 0 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"Ni" "" #ff0000 0 3 0 0 0 0 "">
+	  <Mkr 1.70307e-10/0.1/1e-05 400 -470 3 1 0 0 0 50>
+	<"No" "" #ff00ff 0 3 0 0 0 0 "">
+</Rect>
+<Rect 10 1530 840 470 31 #c0c0c0 1 10 1 1e-11 1 1e-08 1 -8.37595 5 26.6277 1 11.6968 0.5 15 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"NF" "" #ff0000 3 3 0 0 0 0 "">
+	  <Mkr 1.82499e-10/0.1/4.64159e-05 560 -180 3 1 0 0 0 50>
+	<"G" "" #5500ff 3 3 0 0 1 0 "">
+	  <Mkr 1.01393e-10/0.00428133/1e-05 430 -520 3 1 0 0 0 50>
+</Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
