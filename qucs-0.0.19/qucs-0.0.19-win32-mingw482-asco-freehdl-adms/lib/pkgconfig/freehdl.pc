@@ -1,0 +1,18 @@
+prefix=/Users/guitorri/.wine/drive_c/freehdl_cross
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+cxxflags=-static-libstdc++
+cflags=-g -O2
+cxx=wine g++.exe
+libtool=glibtool
+
+
+Name: FreeHDL
+Description: VHDL Simulator
+Version: 0.0.8
+URL: http://freehdl.seul.org
+Requires:
+Conflicts:
+Libs: -L${libdir}
+Cflags: ${cflags} -I${includedir}
