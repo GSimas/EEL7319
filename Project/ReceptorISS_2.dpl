@@ -1,0 +1,32 @@
+<QucsStudio Schematic 3.3.2>
+<Properties>
+View=-81,50,1626,1150,1,0,180
+Grid=10,10,0
+DataSet=*.dat
+DataDisplay=*.sch
+OpenDisplay=1
+showFrame=0
+FrameText0=Title
+FrameText1=Drawn By:
+FrameText2=Date:
+FrameText3=Revision:
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+<Rect 90 470 1230 400 31 #c0c0c0 1 00 1 0 0.05 1 1 -0.8 0.2 0.8 1 0 0 0 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"vlna.Vt" "" #ff00ff 0 3 0 0 0 0 "">
+</Rect>
+<Rect 50 1000 1230 400 31 #c0c0c0 1 00 1 0 200000 5e+06 1 0 0 0 1 -0.000772713 0.002 0.00854807 315 0 225 "" "" "">
+	<Legend 10 -100 0>
+	<"time2freq(vfm.Vt)" "" #ff00ff 0 3 0 0 1 0 "">
+	  <Mkr 4.23458e+06 130 -350 3 1 0 0 0 50>
+</Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
